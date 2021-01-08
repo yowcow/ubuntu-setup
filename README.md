@@ -1,7 +1,7 @@
-debian-setup
+ubuntu-setup
 ============
 
-Provision all of my Debian nodes.
+Provision all of my Ubuntu nodes.
 
 
 Nodes (Groups)
