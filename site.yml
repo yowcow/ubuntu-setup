@@ -1,0 +1,50 @@
+---
+- name: apply configuration to all nodes
+  hosts: all
+  become: yes
+  gather_facts: no
+  roles:
+    ## environment
+    - apt
+    - common
+    - users
+    - ufw
+    ## tools/apps
+    - awscli
+    - erlang
+    - google-cloud
+    - neovim
+    - nodejs
+    - perl
+    - php
+    - protobuf
+    - python
+    - rust
+    - travis
+    - universal-ctags
+    - ziglang
+
+- name: apply configuration to laptop
+  hosts: laptop
+  become: yes
+  gather_facts: no
+  roles:
+    - docker
+    - desktop
+
+- name: apply configuration to development
+  hosts: development
+  become: yes
+  gather_facts: no
+  roles:
+    - docker
+
+- name: apply configuration to production
+  hosts: production
+  become: yes
+  gather_facts: no
+  roles:
+    - certbot
+    - nginx
+    - mysqld
+    - znc

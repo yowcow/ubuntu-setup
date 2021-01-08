@@ -1,0 +1,7 @@
+- name: install packages for protobuf
+  apt:
+    name:
+      - libprotobuf-dev
+      - libprotoc-dev
+      - libupb-dev
+      - protobuf-compiler

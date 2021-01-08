@@ -1,0 +1,43 @@
+- name: install packages for erlang
+  apt:
+    name:
+      - erlang
+      - libssl-dev
+
+- name: check installed otp major version
+  shell:
+    cmd: "erl -eval 'erlang:display(erlang:system_info(otp_release)), halt().' -noshell || true"
+  register: installed_otp_major_version
+
+- name: check installed otp version
+  shell:
+    cmd: 'echo "OTP-$(cat /opt/erlang/lib/erlang/releases/{{ installed_otp_major_version.stdout }}/OTP_VERSION || true)"'
+  register: installed_otp_version
+
+- name: build and install erlang
+  when: installed_otp_version.stdout.find(erlang.revision) == -1
+  block:
+    - git:
+        repo: https://github.com/erlang/OTP.git
+        dest: "{{ erlang.src }}"
+        version: "{{ erlang.revision }}"
+    - shell:
+        chdir: "{{ erlang.src }}"
+        cmd: ./otp_build autoconf
+    - shell:
+        chdir: "{{ erlang.src }}"
+        cmd: "./configure --prefix={{ erlang.prefix }}"
+    - make:
+        chdir: "{{ erlang.src }}"
+        target: clean
+    - make:
+        chdir: "{{ erlang.src }}"
+        target: all
+    - file:
+        path: "{{ erlang.prefix }}"
+        state: absent
+    - make:
+        chdir: "{{ erlang.src }}"
+        target: install
+
+- include: rebar3.yml

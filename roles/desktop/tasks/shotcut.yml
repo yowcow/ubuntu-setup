@@ -1,0 +1,29 @@
+- name: install packages for shotcut
+  apt:
+    name:
+      #- libjack0
+      #- libjack-dev
+      - libjack-jackd2-0
+      - libjack-jackd2-dev
+
+- name: check installed shotcut revision
+  shell:
+    cmd: "(/opt/shotcut/shotcut -v || true) 2>/dev/null"
+  register: installed_revision
+
+- name: fetch and install shotcut
+  when: installed_revision.stdout.find(shotcut.revision) == -1
+  block:
+    - file:
+        path: "{{ shotcut.prefix }}"
+        state: directory
+        mode: "0755"
+    - get_url:
+        url: "https://github.com/mltframework/shotcut/releases/download/v{{ shotcut.revision }}/Shotcut-{{ shotcut.revision | regex_replace('\\.', '') }}.glibc2.14-x86_64.AppImage"
+        dest: "{{ shotcut.prefix }}/shotcut"
+        mode: "0755"
+    - file:
+        src: "{{ shotcut.prefix }}/shotcut"
+        dest: /usr/local/bin/shotcut
+        state: link
+        force: yes

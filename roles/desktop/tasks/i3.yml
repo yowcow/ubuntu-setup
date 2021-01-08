@@ -1,0 +1,45 @@
+---
+- name: install packages for i3
+  apt:
+    name:
+      - blueman
+      - bluez
+      - i3
+      - i3lock
+      - i3-wm
+      - light
+      - nitrogen
+      - pasystray
+      - ranger
+      - rxvt-unicode
+      - x11-utils
+      - xautolock
+      - xinput
+      - xsel
+      - xserver-xorg-input-libinput
+      - xss-lock
+
+# xinput --list
+# xinput --list-props <device>
+# xinput --set-prop <device> 'libinput Accel Speed' 1.0
+- name: install xorg.conf for libinput.conf
+  copy:
+    src: 40-libinput.conf
+    dest: /etc/X11/xorg.conf.d/40-libinput.conf
+
+- name: install pip3 packages for i3
+  pip:
+    name:
+      - i3ipc
+    executable: pip3
+    state: latest
+
+- name: fetch i3-alternate-layout
+  git:
+    repo: https://github.com/olemartinorg/i3-alternating-layout.git
+    dest: "/opt/i3-alternating-layout"
+
+- name: fetch i3ipc-python
+  git:
+    repo: https://github.com/altdesktop/i3ipc-python.git
+    dest: "/opt/i3ipc-python"

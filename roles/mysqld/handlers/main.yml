@@ -1,0 +1,4 @@
+- name: mysql_restart
+  systemd:
+    name: mysql
+    state: restarted

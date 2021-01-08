@@ -1,0 +1,10 @@
+- name: install packages for travis
+  apt:
+    name:
+      - ruby-dev
+
+- name: install ruby gems for travis
+  gem:
+    name: travis
+    state: latest
+    user_install: false

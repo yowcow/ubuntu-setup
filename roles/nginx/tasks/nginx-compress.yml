@@ -1,0 +1,5 @@
+- name: install nginx-compress.conf
+  copy:
+    src: nginx-compress.conf
+    dest: /etc/nginx/conf.d/nginx-compress.conf
+  notify: nginx_restart

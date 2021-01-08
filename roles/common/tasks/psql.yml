@@ -1,0 +1,4 @@
+- name: install packages for postgresql client
+  apt:
+    name:
+      - postgresql-client-12

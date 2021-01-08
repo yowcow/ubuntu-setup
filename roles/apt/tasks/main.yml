@@ -1,0 +1,12 @@
+- name: update apt cache
+  apt:
+    update_cache: yes
+
+- name: install apt-related packages
+  apt:
+    name:
+      - apt-file
+
+- name: update apt-file cache
+  command:
+    cmd: apt-file update

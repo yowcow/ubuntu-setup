@@ -1,0 +1,17 @@
+---
+- name: install packages for desktop
+  apt:
+    name:
+      - bluez
+      - firmware-linux-nonfree
+      - materia-gtk-theme
+
+- include: alacritty.yml
+- include: chrysalis.yml
+- include: fonts.yml
+- include: goph.yml
+- include: i3.yml
+- include: mozc.yml
+- include: shotcut.yml
+- include: sway.yml
+- include: wine.yml

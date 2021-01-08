@@ -1,0 +1,8 @@
+#!/bin/sh
+
+PATH=/usr/sbin:/usr/bin:$PATH
+
+certbot renew -n \
+    1>/var/log/certbot.log \
+    2>/var/log/certbot.err \
+&& nginx -s reload

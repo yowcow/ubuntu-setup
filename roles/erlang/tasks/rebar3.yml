@@ -1,0 +1,19 @@
+- name: check installed rebar3 revision
+  shell:
+    cmd: "(rebar3 --version || true) 2>/dev/null"
+  register: installed_revision
+
+- name: build and install rebar3
+  when: installed_revision.stdout.find(rebar3.revision) == -1
+  block:
+    - git:
+        repo: https://github.com/erlang/rebar3.git
+        dest: "{{ rebar3.src }}"
+        version: "{{ rebar3.revision }}"
+    - shell:
+        chdir: "{{ rebar3.src }}"
+        cmd: "PATH={{ erlang.prefix }}:$PATH ./bootstrap"
+    - copy:
+        dest: /usr/local/bin/rebar3
+        src: "{{ rebar3.src }}/rebar3"
+        mode: "0755"

@@ -1,0 +1,12 @@
+- name: check installed rebar3 revision
+  shell:
+    cmd: "(docker-compose --version || true) 2>/dev/null"
+  register: installed_revision
+
+- name: install docker-compose
+  when: installed_revision.stdout.find(docker_compose.revision) == -1
+  block:
+    - get_url:
+        url: "https://github.com/docker/compose/releases/download/{{ docker_compose.revision }}/docker-compose-Linux-x86_64"
+        dest: /usr/local/bin/docker-compose
+        mode: "0755"

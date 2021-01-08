@@ -1,0 +1,12 @@
+---
+users:
+  - user: yowcow
+    groups:
+      - docker
+      - sudo
+      - video
+
+ufw:
+  default: deny
+  logging: low
+  rules: []

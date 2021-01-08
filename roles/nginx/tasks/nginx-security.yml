@@ -1,0 +1,5 @@
+- name: install nginx-security.conf
+  copy:
+    src: nginx-security.conf
+    dest: /etc/nginx/conf.d/nginx-security.conf
+  notify: nginx_restart

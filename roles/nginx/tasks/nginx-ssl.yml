@@ -1,0 +1,11 @@
+- name: fetch dhparam.pem
+  get_url:
+    dest: /etc/nginx/conf.d/dhparam.pem
+    url: https://ssl-config.mozilla.org/ffdhe2048.txt
+  notify: nginx_restart
+
+- name: install nginx-ssl.conf
+  copy:
+    src: nginx-ssl.conf
+    dest: /etc/nginx/conf.d/nginx-ssl.conf
+  notify: nginx_restart

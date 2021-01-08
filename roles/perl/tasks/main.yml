@@ -1,0 +1,14 @@
+- name: install packages for perl
+  apt:
+    name:
+      - carton
+      - cpanminus
+      - cpanoutdated
+      - curl
+      - perl
+      - perl-doc
+
+#- name: install cpanm for perl
+#  shell:
+#    cmd: curl -L http://cpanmin.us | perl - --sudo App::cpanminus
+#    creates: /usr/local/bin/cpanm

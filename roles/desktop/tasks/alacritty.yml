@@ -1,0 +1,30 @@
+---
+- name: install packages for alacritty
+  apt:
+    name:
+      - cmake
+      - libfreetype6-dev
+      - libfontconfig1-dev
+      - libxcb-xfixes0-dev
+      - pkg-config
+      - python3
+
+- name: check installed alacritty revision
+  shell:
+    cmd: "(alacritty --version || true) 2>/dev/null"
+  register: installed_revision
+
+- name: build and install alacritty
+  when: installed_revision.stdout.find(alacritty.revision) == -1
+  block:
+    - git:
+        repo: https://github.com/alacritty/alacritty.git
+        dest: "{{ alacritty.src }}"
+        version: "v{{ alacritty.revision }}"
+    - shell:
+        chdir: "{{ alacritty.src }}"
+        cmd: cargo build --release
+    - copy:
+        dest: /usr/local/bin/alacritty
+        src: "{{ alacritty.src }}//target/release/alacritty"
+        mode: "0755"

@@ -1,0 +1,10 @@
+- name: install packages for sysstat
+  apt:
+    name:
+      - sysstat
+
+# do `dpkg-reconfigure sysstat` to configure interactively
+- name: enable sysstat
+  copy:
+    src: sysstat
+    dest: /etc/default/sysstat

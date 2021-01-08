@@ -1,0 +1,29 @@
+- name: add docker apt-key
+  apt_key:
+    id: 0EBFCD88
+    url: "https://download.docker.com/linux/debian/gpg"
+    state: present
+
+- name: add docker apt-repository
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/debian buster edge"
+    state: present
+
+- name: install docker packages
+  apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+
+#- name: create mount point /sys/fs/cgroup/systemd
+#  file:
+#    path: /sys/fs/cgroup/systemd
+#    state: directory
+#
+#- name: mount /sys/fs/cgroup/systemd
+#  mount:
+#    path: /sys/fs/cgroup/systemd
+#    fstype: cgroup
+#    opts: none,
+#    state: mounted

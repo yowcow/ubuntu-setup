@@ -1,0 +1,31 @@
+- name: install packages for nginx
+  apt:
+    name:
+      - logrotate
+      - nginx
+      - nginx-common
+
+- name: enable nginx service
+  systemd:
+    name: nginx
+    enabled: yes
+
+- name: start nginx service
+  systemd:
+    name: nginx
+    state: started
+
+- name: install nginx.conf
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+  notify: nginx_restart
+
+- name: install logrotate
+  copy:
+    src: nginx-logrotate
+    dest: /etc/logrotate.d/nginx
+
+- include: nginx-ssl.yml
+- include: nginx-security.yml
+- include: nginx-compress.yml

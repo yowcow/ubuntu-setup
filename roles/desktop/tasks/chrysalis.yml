@@ -1,0 +1,24 @@
+- name: check installed shotcut revision
+  shell:
+    cmd: "(cat {{ chrysalis.prefix }}/installed-revision || true) 2>/dev/null"
+  register: installed_revision
+
+- name: fetch and install chrysalis
+  when: installed_revision.stdout.find(chrysalis.revision) == -1
+  block:
+    - file:
+        path: "{{ chrysalis.prefix }}"
+        state: directory
+        mode: "0755"
+    - get_url:
+        url: "https://github.com/keyboardio/Chrysalis/releases/download/chrysalis-{{ chrysalis.revision }}/Chrysalis-{{ chrysalis.revision }}.AppImage"
+        dest: "{{ chrysalis.prefix }}/chrysalis"
+        mode: "0755"
+    - file:
+        src: "{{ chrysalis.prefix }}/chrysalis"
+        dest: /usr/local/bin/chrysalis
+        state: link
+        force: yes
+    - copy:
+        content: "{{ chrysalis.revision }}"
+        dest: "{{ chrysalis.prefix }}/installed-revision"

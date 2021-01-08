@@ -1,0 +1,6 @@
+- name: install packages for php
+  apt:
+    name:
+      - composer
+      - php-cli
+      - php-xml

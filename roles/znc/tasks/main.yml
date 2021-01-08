@@ -1,0 +1,10 @@
+- name: install znc
+  apt:
+    name: znc
+
+- name: install znc service
+  copy:
+    src: znc.service
+    dest: /etc/systemd/system/znc.service
+
+## do `sudo -u znc znc -f --makeconf` for initial set up

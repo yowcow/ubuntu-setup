@@ -1,0 +1,43 @@
+## znc
+- name: add group znc
+  group:
+    name: znc
+    gid: 2001
+
+- name: add user znc
+  user:
+    name: znc
+    uid: 2001
+    group: znc
+    shell: "/sbin/nologin"
+    home: "/home/znc"
+
+
+## www-user
+- name: add group www-user
+  group:
+    name: www-user
+    gid: 1100
+
+- name: add user www-user
+  user:
+    name: www-user
+    uid: 1100
+    group: www-user
+    shell: "/sbin/nologin"
+    home: "/home/www-user"
+
+
+## docker
+- name: add group docker
+  group:
+    name: docker
+    gid: 2002
+
+
+## group-specific users
+- name: add users to groups
+  user:
+    name: "{{ item.user }}"
+    groups: "{{ item.groups }}"
+  with_items: "{{ users }}"

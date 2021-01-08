@@ -1,0 +1,15 @@
+- name: install docker.io
+  apt:
+    name:
+      - docker.io
+      - cgroup-lite
+
+- name: enable docker service
+  systemd:
+    name: docker
+    enabled:  yes
+
+- name: start docker service
+  systemd:
+    name: docker
+    state: started

@@ -1,0 +1,12 @@
+- name: install packages for nodejs
+  apt:
+    name:
+      - node-typescript
+      - nodejs
+      - npm
+
+- name: install packages for nodejs/puppeteer
+  apt:
+    name:
+      - libxss1
+      - libgdm1

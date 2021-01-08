@@ -1,0 +1,6 @@
+- name: install packages for wine
+  apt:
+    name:
+      - wine
+      - wine32
+      - winetricks

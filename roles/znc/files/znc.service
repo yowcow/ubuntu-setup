@@ -1,0 +1,13 @@
+[Unit]
+Description = ZNC service
+
+[Service]
+User = znc
+Group = znc
+WorkingDirectory = /home/znc
+ExecStart = /usr/bin/znc -f
+Restart = always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target

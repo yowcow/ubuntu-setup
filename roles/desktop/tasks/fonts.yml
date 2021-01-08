@@ -1,0 +1,20 @@
+---
+# Fiding default fonts:
+#   * fonts for "sans": `fc-match sans`
+#   * fonts for "sans" in ja: `fc-match sans:lang=ja`
+#   * fonts for "DejaVu.ttf": `fc-match -a "DejaVu Sans" | less`
+
+- name: install font packages
+  apt:
+    name:
+      - fonts-firacode
+      - fonts-hack
+      - fonts-liberation
+      - fonts-liberation2
+      - fonts-noto
+      - fonts-noto-hinted
+
+- name: reject fonts
+  copy:
+    src: 70-rejected-fonts.conf
+    dest: /etc/fonts/conf.d/70-rejected-fonts.conf
