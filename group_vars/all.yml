@@ -7,7 +7,7 @@ alacritty:
 
 # https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst
 awscli:
-  revision: 2.1.15
+  revision: 2.1.18
   src: /opt/src/awscli
 
 # https://github.com/keyboardio/Chrysalis/releases
