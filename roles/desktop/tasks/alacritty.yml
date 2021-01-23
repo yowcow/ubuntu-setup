@@ -26,5 +26,10 @@
         cmd: cargo build --release
     - copy:
         dest: /usr/local/bin/alacritty
-        src: "{{ alacritty.src }}//target/release/alacritty"
+        src: "{{ alacritty.src }}/target/release/alacritty"
         mode: "0755"
+    - copy:
+        dest: /usr/share/pixmaps/Alacritty.svg
+        src: "{{ alacritty.src }}/extra/logo/alacritty-term.svg"
+    - command: "desktop-file-install {{ alacritty.src }}/extra/linux/Alacritty.desktop"
+    - command: update-desktop-database

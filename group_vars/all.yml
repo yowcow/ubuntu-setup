@@ -10,11 +10,6 @@ awscli:
   revision: 2.1.20
   src: /opt/src/awscli
 
-# https://github.com/keyboardio/Chrysalis/releases
-chrysalis:
-  revision: 0.7.9
-  prefix : /opt/chrysalis
-
 # https://github.com/docker/compose/releases
 docker_compose:
   revision: 1.27.4
@@ -29,11 +24,6 @@ erlang:
 rebar3:
   revision: 3.14.3
   src: /opt/src/rebar3
-
-# https://github.com/mltframework/shotcut/releases
-shotcut:
-  revision: 20.09.27
-  prefix: /opt/shotcut
 
 # https://ziglang.org/download/
 # curl -sSL https://ziglang.org/download/index.json | jq -r .master.version

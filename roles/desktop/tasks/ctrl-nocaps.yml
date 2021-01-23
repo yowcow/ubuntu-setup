@@ -1,0 +1,4 @@
+- name: update /etc/default/keyboard
+  copy:
+    src: keyboard
+    dest: /etc/default/keyboard

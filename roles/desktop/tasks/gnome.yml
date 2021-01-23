@@ -1,0 +1,9 @@
+---
+- name: install gnome apt packages
+  apt:
+    name:
+      - dconf-cli
+      - gnome-tweaks
+      - uuid-runtime
+
+- include: gnome-goph.yml

@@ -1,10 +1,4 @@
 ---
-- name: install packages for goph
-  apt:
-    name:
-      - dconf-cli
-      - uuid-runtime
-
 - name: fetch and install goph
   get_url:
     url: https://git.io/vQgMr

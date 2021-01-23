@@ -12,7 +12,6 @@ ANSIBLE := ansible -i hosts.$(GROUP) -e 'ansible_python_interpreter=/usr/bin/pyt
 ANSIBLE_PLAYBOOK := ansible-playbook -i hosts.$(GROUP) -K -e 'ansible_python_interpreter=/usr/bin/python3' -l $(GROUP)
 
 all:
-	sudo dpkg --add-architecture i386
 	$(ANSIBLE) $(GROUP) -m ping
 	sudo $(MAKE) play-role GROUP=$(GROUP) ROLE=apt
 
