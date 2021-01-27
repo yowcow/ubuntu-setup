@@ -6,10 +6,11 @@
 #      - firmware-linux-nonfree
 #      - materia-gtk-theme
 
-- include: alacritty.yml
+#- include: alacritty.yml
 - include: ctrl-nocaps.yml
 - include: fonts.yml
 - include: gnome.yml
+- include: regolith.yml
 #- include: i3.yml
 #- include: mozc.yml
 #- include: sway.yml
