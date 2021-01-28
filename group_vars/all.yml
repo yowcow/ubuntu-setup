@@ -1,18 +1,18 @@
 ---
 # https://github.com/alacritty/alacritty/releases
 alacritty:
-  revision: 0.6.0
+  revision: 0.7.1
   src: /opt/src/alacritty
   prefix: /opt/alacritty
 
 # https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst
 awscli:
-  revision: 2.1.20
+  revision: 2.1.21
   src: /opt/src/awscli
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: 1.27.4
+  revision: 1.28.2
 
 # https://github.com/erlang/otp/releases
 erlang:
