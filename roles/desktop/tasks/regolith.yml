@@ -1,7 +1,8 @@
 ---
 - name: Add Regolith Linux APT repository
   ansible.builtin.apt_repository:
-    repo: ppa:regolith-linux/release
+    repo: 'ppa:regolith-linux/release'
+    filename: regolith-linux-ubuntu-release
 
 - name: Add Regolith Linux Desktop
   apt:
