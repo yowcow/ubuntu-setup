@@ -20,6 +20,7 @@
       - cmake
       - cronolog
       - curl
+      - devscripts
       - finger
       - flex
       - g++
