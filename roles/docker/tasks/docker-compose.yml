@@ -1,4 +1,4 @@
-- name: check installed rebar3 revision
+- name: check installed docker-compose revision
   shell:
     cmd: "(docker-compose --version || true) 2>/dev/null"
   register: installed_revision

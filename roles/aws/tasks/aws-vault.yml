@@ -5,8 +5,6 @@
     cmd: "(aws-vault --version || true) 2>&1"
   register: installed_revision
 
-- debug: var=installed_revision
-
 - name: install aws-vault
   when: installed_revision.stdout.find(aws_vault.revision) == -1
   block:
