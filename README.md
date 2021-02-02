@@ -12,7 +12,7 @@ Nodes (Groups)
 * www-x28
 
 
-How To Run
+HOW TO RUN
 ----------
 
 Set up apt repositories:
@@ -28,7 +28,15 @@ Play one role only:
     sudo make play-role GROUP=production ROLE=nginx
 
 
-See Also
+HOW TO DEBUG
+------------
+
+Do:
+
+    - debug: var=whattodebug
+
+
+SEE ALSO
 --------
 
 * Module Docs: https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
