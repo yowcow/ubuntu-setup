@@ -29,6 +29,7 @@
       - golang
       - gpg
       - gnupg-agent
+      - gnupg2
       - htop
       - jq
       - links
