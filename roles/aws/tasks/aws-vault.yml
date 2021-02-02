@@ -12,3 +12,9 @@
         url: "https://github.com/99designs/aws-vault/releases/download/{{ aws_vault.revision }}/aws-vault-linux-amd64"
         dest: /usr/local/bin/aws-vault
         mode: "0755"
+
+- name: install related packages
+  apt:
+    name:
+      - gnupg2
+      - pass
