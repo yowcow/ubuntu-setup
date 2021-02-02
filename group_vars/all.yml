@@ -10,6 +10,10 @@ awscli:
   revision: 2.1.21
   src: /opt/src/awscli
 
+# https://github.com/99designs/aws-vault/releases
+aws_vault:
+  revision: v6.2.0
+
 # https://github.com/docker/compose/releases
 docker_compose:
   revision: 1.28.2

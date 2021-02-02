@@ -10,7 +10,7 @@
     - users
     - ufw
     ## tools/apps
-    - awscli
+    - aws
     - erlang
     - google-cloud
     - neovim

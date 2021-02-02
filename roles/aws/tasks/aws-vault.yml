@@ -1,0 +1,16 @@
+- name: check installed aws-vault revision
+  # * not sure why printed to stderr
+  # * but redirect stderr to stdout to make this work
+  shell:
+    cmd: "(aws-vault --version || true) 2>&1"
+  register: installed_revision
+
+- debug: var=installed_revision
+
+- name: install aws-vault
+  when: installed_revision.stdout.find(aws_vault.revision) == -1
+  block:
+    - get_url:
+        url: "https://github.com/99designs/aws-vault/releases/download/{{ aws_vault.revision }}/aws-vault-linux-amd64"
+        dest: /usr/local/bin/aws-vault
+        mode: "0755"
