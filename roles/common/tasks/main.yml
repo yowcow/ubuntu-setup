@@ -65,7 +65,6 @@
       - libxml2-dev
       - libxml2-utils
 
-- include: keybase.yml
 - include: mysql.yml
 - include: psql.yml
 - include: sysstat.yml

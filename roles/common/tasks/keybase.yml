@@ -1,3 +1,0 @@
-- name: install keybase app
-  apt:
-    deb: https://prerelease.keybase.io/keybase_amd64.deb
