@@ -7,7 +7,7 @@ alacritty:
 
 # https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst
 awscli:
-  revision: 2.1.21
+  revision: 2.1.24
   src: /opt/src/awscli
 
 # https://github.com/99designs/aws-vault/releases
@@ -20,7 +20,7 @@ docker_compose:
 
 # https://github.com/erlang/otp/releases
 erlang:
-  revision: OTP-23.2.3
+  revision: OTP-23.2.4
   src: /opt/src/erlang
   prefix: /opt/erlang
 
