@@ -5,14 +5,14 @@
       - python3-certbot-dns-google
       - python-certbot-dns-google-doc
 
-#- name: install certbot crontab
-#  copy:
-#    src: crontab/certbot
-#    dest: /etc/cron.daily/certbot
-#    mode: "0755"
-
 - name: install certbot logrotate
   copy:
     src: logrotate/certbot
     dest: /etc/logrotate.d/certbot
+    mode: "0644"
+
+- name: install cli.ini
+  copy:
+    src: letsencrypt/cli.ini
+    dest: /etc/letsencrypt/cli.ini
     mode: "0644"
