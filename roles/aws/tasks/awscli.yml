@@ -20,3 +20,6 @@
     - shell:
         chdir: "{{ awscli.src }}/awscli-{{ awscli.revision }}"
         cmd: "(which aws && ./aws/install --update) || ./aws/install"
+
+- name: clean-up old files
+  command: "tmpreaper --all --showdeleted 30d {{ awscli.src }}"

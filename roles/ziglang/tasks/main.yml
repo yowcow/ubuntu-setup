@@ -29,3 +29,6 @@
         src: "{{ zig.src }}/zig-{{ latest_revision.json.master.version }}.tar.xz"
         dest: "{{ zig.prefix }}"
         extra_opts: [--strip-components=1]
+
+- name: clean-up old files
+  command: "tmpreaper --all --showdeleted 30d {{ zig.src }}"
