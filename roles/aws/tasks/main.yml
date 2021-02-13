@@ -1,2 +1,2 @@
-- include: awscli.yml
+- include: aws-cli.yml
 - include: aws-vault.yml

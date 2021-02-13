@@ -1,0 +1,34 @@
+- name: check installed aws-cli revision
+  shell:
+    cmd: "(aws --version | awk '{ print $1 }' || true) 2>/dev/null"
+  register: installed_revision
+
+- name: check latest aws-cli release
+  uri:
+    url: https://api.github.com/repos/aws/aws-cli/tags
+    method: GET
+    return_content: yes
+  register: latest_tag
+
+- name: fetch and install aws-cli
+  vars:
+    latest_revision: "{{ latest_tag.json.0.name }}"
+  when: installed_revision.stdout.find(latest_revision) == -1
+  block:
+    - file:
+        path: "{{ aws_cli.src }}/awscli-{{ latest_revision }}"
+        state: directory
+        mode: "0755"
+    - get_url:
+        url: "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-{{ latest_revision }}.zip"
+        dest: "{{ aws_cli.src }}/awscli-{{ latest_revision }}.zip"
+        mode: "0644"
+    - unarchive:
+        src: "{{ aws_cli.src }}/awscli-{{ latest_revision }}.zip"
+        dest: "{{ aws_cli.src }}/awscli-{{ latest_revision }}"
+    - shell:
+        chdir: "{{ aws_cli.src }}/awscli-{{ latest_revision }}"
+        cmd: "(which aws && ./aws/install --update) || ./aws/install"
+
+- name: clean-up old files
+  command: "tmpreaper --all --showdeleted 30d {{ aws_cli.src }}"

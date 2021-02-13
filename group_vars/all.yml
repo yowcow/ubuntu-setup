@@ -6,8 +6,8 @@ alacritty:
   prefix: /opt/alacritty
 
 # https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst
-awscli:
-  revision: 2.1.25
+# curl -sSL https://api.github.com/repos/aws/aws-cli/tags
+aws_cli:
   src: /opt/src/awscli
 
 # https://github.com/99designs/aws-vault/releases
