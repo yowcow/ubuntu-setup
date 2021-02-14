@@ -1,10 +1,8 @@
 ---
-#- name: install packages for desktop
-#  apt:
-#    name:
-#      - bluez
-#      - firmware-linux-nonfree
-#      - materia-gtk-theme
+- name: install desktop packages
+  apt:
+    name:
+      - ranger
 
 #- include: alacritty.yml
 - include: ctrl-nocaps.yml
