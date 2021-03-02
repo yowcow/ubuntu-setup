@@ -65,6 +65,16 @@
       - libxml2-dev
       - libxml2-utils
 
+- name: install basic fonts
+  apt:
+    name:
+      - fonts-freefont-ttf
+      - fonts-ipafont-gothic
+      - fonts-kacst
+      - fonts-liberation
+      - fonts-thai-tlwg
+      - fonts-wqy-zenhei
+
 - include: mysql.yml
 - include: psql.yml
 - include: sysstat.yml

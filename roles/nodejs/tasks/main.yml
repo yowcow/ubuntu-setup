@@ -4,3 +4,5 @@
       - node-typescript
       - nodejs
       - npm
+
+- include: puppeteer.yml
