@@ -20,13 +20,13 @@ docker_compose:
 
 # https://github.com/erlang/otp/releases
 erlang:
-  revision: OTP-23.2.4
+  revision: OTP-23.2.7
   src: /opt/src/erlang
   prefix: /opt/erlang
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
-  revision: 3.14.3
+  revision: 3.14.4
   src: /opt/src/rebar3
 
 # https://ziglang.org/download/
