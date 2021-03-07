@@ -9,20 +9,22 @@
     - common
     - users
     - ufw
-    ## tools/apps
-    - aws
+    ## compilers/runtimes
+    - elm
     - erlang
-    - google-cloud
-    - neovim
     - nodejs
     - perl
     - php
-    - protobuf
     - python
     - rust
+    - ziglang
+    ## tools/apps
+    - aws
+    - google-cloud
+    - neovim
+    - protobuf
     - travis
     - universal-ctags
-    - ziglang
 
 - name: apply configuration to laptop
   hosts: laptop

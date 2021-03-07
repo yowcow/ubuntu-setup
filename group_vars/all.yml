@@ -18,6 +18,10 @@ aws_vault:
 docker_compose:
   revision: 1.28.2
 
+# https://github.com/elm/compiler/releases
+elm:
+  revision: 0.19.1
+
 # https://github.com/erlang/otp/releases
 erlang:
   revision: OTP-23.2.7

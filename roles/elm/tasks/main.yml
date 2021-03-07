@@ -1,0 +1,16 @@
+- name: check installed elm version
+  shell:
+    cmd: "(/usr/local/bin/elm --version || true) 2>/dev/null"
+  register: installed_revision
+
+- name: install elm
+  when: installed_revision.stdout.find(elm.revision) == -1
+  block:
+    - get_url:
+        url: "https://github.com/elm/compiler/releases/download/{{ elm.revision }}/binary-for-linux-64-bit.gz"
+        dest: /tmp/elm.gz
+    - shell:
+        cmd: "gunzip -c /tmp/elm.gz > /usr/local/bin/elm"
+    - file:
+        path: /usr/local/bin/elm
+        mode: "0755"
