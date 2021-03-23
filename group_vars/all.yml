@@ -1,7 +1,7 @@
 ---
 # https://github.com/alacritty/alacritty/releases
 alacritty:
-  revision: 0.7.1
+  revision: 0.7.2
   src: /opt/src/alacritty
   prefix: /opt/alacritty
 
@@ -12,11 +12,11 @@ aws_cli:
 
 # https://github.com/99designs/aws-vault/releases
 aws_vault:
-  revision: v6.2.0
+  revision: v6.3.0
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: 1.28.2
+  revision: 1.28.6
 
 # https://github.com/elm/compiler/releases
 elm:
