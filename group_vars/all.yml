@@ -24,7 +24,7 @@ elm:
 
 # https://github.com/erlang/otp/releases
 erlang:
-  revision: OTP-23.2.7
+  revision: OTP-23.3
   src: /opt/src/erlang
   prefix: /opt/erlang
 
