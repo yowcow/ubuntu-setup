@@ -28,6 +28,12 @@ erlang:
   src: /opt/src/erlang
   prefix: /opt/erlang
 
+# https://julialang.org/downloads/
+julia:
+  version: "1.6"
+  revision: 1.6.0
+  prefix: /opt/julia
+
 # https://github.com/erlang/rebar3/releases
 rebar3:
   revision: 3.14.4

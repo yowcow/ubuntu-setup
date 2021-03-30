@@ -1,0 +1,22 @@
+- name: check installed julia revision
+  shell:
+    cmd: "(/opt/julia/bin/julia --version || true) 2>/dev/null"
+  register: installed_revision
+
+- name: install julia
+  when: installed_revision.stdout.find(julia.revision) == -1
+  block:
+    - get_url:
+        url: "https://julialang-s3.julialang.org/bin/linux/x64/{{ julia.version }}/julia-{{ julia.revision }}-linux-x86_64.tar.gz"
+        dest: /tmp/julia.tar.gz
+    - file:
+        path: "{{ julia.prefix }}"
+        state: absent
+    - file:
+        path: "{{ julia.prefix }}"
+        state: directory
+        mode: "0755"
+    - unarchive:
+        src: /tmp/julia.tar.gz
+        dest: "{{ julia.prefix }}"
+        extra_opts: [--strip-components=1]
