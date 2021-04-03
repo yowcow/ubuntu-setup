@@ -1,12 +1,12 @@
 ---
-- name: install fcitx packages
+- name: remove fcitx packages
   apt:
     name:
       - fcitx-mozc
+    state: absent
 
-- name: remove ibus packages
+- name: install ibus packages
   apt:
     name:
       - ibus
       - ibus-mozc
-    state: absent
