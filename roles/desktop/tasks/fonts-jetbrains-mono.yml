@@ -1,0 +1,23 @@
+- name: Create /usr/local/share/fonts/pt-mono
+  file:
+    path: "{{ jetbrains_mono.prefix }}"
+    state: directory
+
+- name: Check if JetBrains Mono font is installed
+  shell:
+    cmd: "(cat {{ jetbrains_mono.prefix }}/revision || true) 2>/dev/null"
+  register: installed_revision
+
+- name: Install JetBrains Mono font if not installed
+  when: installed_revision.stdout.find(jetbrains_mono.revision) == -1
+  block:
+    - get_url:
+        url: "https://github.com/JetBrains/JetBrainsMono/releases/download/v{{ jetbrains_mono.revision }}/JetBrainsMono-{{ jetbrains_mono.revision }}.zip"
+        dest: /tmp/JetBrainsMono.zip
+    - unarchive:
+        src: /tmp/JetBrainsMono.zip
+        dest: "{{ jetbrains_mono.prefix }}"
+    - copy:
+        dest: "{{ jetbrains_mono.prefix }}/revision"
+        content: "{{ jetbrains_mono.revision }}"
+    - command: fc-cache

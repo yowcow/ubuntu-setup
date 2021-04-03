@@ -3,6 +3,7 @@
   apt:
     name:
       - blueman
+      - kanshi
       - suckless-tools
       - sway
       - swayidle

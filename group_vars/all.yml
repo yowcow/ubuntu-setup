@@ -28,6 +28,11 @@ erlang:
   src: /opt/src/erlang
   prefix: /opt/erlang
 
+# https://github.com/JetBrains/JetBrainsMono/releases
+jetbrains_mono:
+  revision: "2.225"
+  prefix: /usr/local/share/fonts/jetbrains-mono
+
 # https://julialang.org/downloads/
 julia:
   version: "1.6"

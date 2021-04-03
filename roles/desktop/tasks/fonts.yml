@@ -20,4 +20,5 @@
     src: 70-rejected-fonts.conf
     dest: /etc/fonts/conf.d/70-rejected-fonts.conf
 
+- include: fonts-jetbrains-mono.yml
 - include: fonts-pt-mono.yml
