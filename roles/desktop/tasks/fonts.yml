@@ -8,6 +8,7 @@
   apt:
     name:
       - fonts-firacode
+      - fonts-font-awesome
       - fonts-hack
       - fonts-liberation
       - fonts-liberation2
