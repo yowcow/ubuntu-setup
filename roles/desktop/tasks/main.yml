@@ -4,6 +4,12 @@
     name:
       - ranger
 
+- name: common desktop environment
+  copy:
+    src: environment
+    dest: /etc/environment
+    mode: "0644"
+
 - include: alacritty.yml
 - include: backlight.yml
 - include: ctrl-nocaps.yml
@@ -11,6 +17,6 @@
 - include: gnome.yml
 #- include: regolith.yml
 #- include: i3.yml
-#- include: mozc.yml
+- include: mozc.yml
 - include: sway.yml
 #- include: wine.yml
