@@ -3,12 +3,12 @@
   apt:
     name:
       - fcitx
-      - fcitx-config-gtk
+      - fcitx-frontend-all
       - fcitx-mozc
-    state: absent
 
 - name: ibus packages
   apt:
     name:
       - ibus
       - ibus-mozc
+    state: absent
