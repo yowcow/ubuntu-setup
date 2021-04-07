@@ -22,10 +22,10 @@
 # xinput --list
 # xinput --list-props <device>
 # xinput --set-prop <device> 'libinput Accel Speed' 1.0
-- name: install xorg.conf for libinput.conf
-  copy:
-    src: 40-libinput.conf
-    dest: /etc/X11/xorg.conf.d/40-libinput.conf
+#- name: install xorg.conf for libinput.conf
+#  copy:
+#    src: 40-libinput.conf
+#    dest: /etc/X11/xorg.conf.d/40-libinput.conf
 
 - name: install pip3 packages for i3
   pip:
