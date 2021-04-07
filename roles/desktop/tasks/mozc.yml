@@ -5,7 +5,6 @@
       - fcitx
       - fcitx-frontend-all
       - fcitx-mozc
-    state: absent
 
 - name: ibus packages
   apt:
@@ -19,3 +18,4 @@
     name:
       - uim
       - uim-mozc
+    state: absent
