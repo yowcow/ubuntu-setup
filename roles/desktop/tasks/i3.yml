@@ -11,7 +11,7 @@
       - nitrogen
       - pasystray
       - ranger
-      - rxvt-unicode
+      - rofi
       - x11-utils
       - xautolock
       - xinput
