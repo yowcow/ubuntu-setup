@@ -5,12 +5,12 @@
       - blueman
       - bluez
       - i3
+      - i3blocks
       - i3lock
       - i3-wm
       - light
       - nitrogen
       - pasystray
-      - polybar
       - ranger
       - rofi
       - x11-utils
