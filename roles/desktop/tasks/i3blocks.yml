@@ -1,0 +1,34 @@
+---
+- name: check installed i3blocks revision
+  shell:
+    cmd: "(/usr/local/bin/i3blocks -V || true) 2>/dev/null"
+  register: installed_revision
+
+- name: fetch and install i3blocks
+  when: installed_revision.stdout.find(i3blocks.revision) == -1
+  block:
+    - file:
+        path: /tmp/i3blocks
+        state: absent
+    - file:
+        path: /tmp/i3blocks
+        state: directory
+    - get_url:
+        url: "https://github.com/vivien/i3blocks/archive/refs/tags/{{ i3blocks.revision }}.tar.gz"
+        dest: /tmp/i3blocks.tar.gz
+    - unarchive:
+        src: /tmp/i3blocks.tar.gz
+        dest: /tmp/i3blocks
+        extra_opts: [--strip-components=1]
+    - shell:
+        cmd: ./autogen.sh
+        chdir: /tmp/i3blocks
+    - shell:
+        cmd: ./configure
+        chdir: /tmp/i3blocks
+    - shell:
+        cmd: make
+        chdir: /tmp/i3blocks
+    - shell:
+        cmd: make install
+        chdir: /tmp/i3blocks
