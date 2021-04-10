@@ -8,6 +8,7 @@
       - i3lock
       - i3-wm
       - light
+      - lm-sensors
       - nitrogen
       - pasystray
       - ranger
