@@ -28,10 +28,6 @@ erlang:
   src: /opt/src/erlang
   prefix: /opt/erlang
 
-# https://github.com/vivien/i3blocks/releases
-i3blocks:
-  revision: "1.5"
-
 # https://github.com/JetBrains/JetBrainsMono/releases
 jetbrains_mono:
   revision: "2.225"

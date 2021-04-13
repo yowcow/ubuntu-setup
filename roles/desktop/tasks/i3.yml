@@ -44,5 +44,3 @@
   git:
     repo: https://github.com/altdesktop/i3ipc-python.git
     dest: "/opt/i3ipc-python"
-
-- include: i3blocks.yml
