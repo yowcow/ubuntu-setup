@@ -1,0 +1,10 @@
+- name: check installed i3blocks version
+  shell:
+    cmd: "dpkg-query -W i3blocks 2>/dev/null | awk '{ print $2 }'"
+  register: installed_revision
+
+- name: install i3blocks
+  when: installed_revision.stdout.find(i3blocks.revision) == -1
+  block:
+    - apt:
+        deb: "https://github.com/yowcow/i3blocks-deb/releases/download/{{ i3blocks.revision }}/i3blocks_{{ i3blocks.revision }}_amd64.deb"
