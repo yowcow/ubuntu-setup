@@ -21,6 +21,7 @@
       - cronolog
       - curl
       - devscripts
+      - equivs
       - finger
       - flex
       - g++
