@@ -31,7 +31,7 @@ erlang:
 # https://github.com/vivien/i3blocks/releases
 # https://github.com/yowcow/i3blocks-deb/releases
 i3blocks:
-  revision: 1.5-1
+  revision: 1.5-2
 
 # https://github.com/JetBrains/JetBrainsMono/releases
 jetbrains_mono:
