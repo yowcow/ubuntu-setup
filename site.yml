@@ -24,7 +24,6 @@
     - google-cloud
     - neovim
     - protobuf
-    - travis
     - universal-ctags
 
 - name: apply configuration to laptop

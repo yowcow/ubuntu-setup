@@ -12,7 +12,7 @@
         version: "{{ rebar3.revision }}"
     - shell:
         chdir: "{{ rebar3.src }}"
-        cmd: "PATH={{ erlang.prefix }}:$PATH ./bootstrap"
+        cmd: ./bootstrap
     - copy:
         dest: /usr/local/bin/rebar3
         src: "{{ rebar3.src }}/rebar3"
