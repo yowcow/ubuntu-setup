@@ -1,12 +1,12 @@
-- name: check installed erlang version
+- name: check installed yowcow-erlang version
   shell:
-    cmd: "dpkg-query -W erlang 2>/dev/null | awk '{ print $2 }'"
+    cmd: "dpkg-query -W yowcow-erlang 2>/dev/null | awk '{ print $2 }'"
   register: installed_revision
 
-- name: install erlang
-  when: installed_revision.stdout.find(erlang.revision) == -1
+- name: install yowcow-erlang
+  when: installed_revision.stdout.find(yowcow_erlang.revision) == -1
   block:
     - apt:
-        deb: "https://github.com/yowcow/erlang-deb/releases/download/{{ erlang.revision }}/erlang_{{ erlang.revision }}_amd64.deb"
+        deb: "https://github.com/yowcow/erlang-deb/releases/download/{{ yowcow_erlang.revision }}/yowcow-erlang_{{ yowcow_erlang.revision }}_amd64.deb"
 
 - include: rebar3.yml
