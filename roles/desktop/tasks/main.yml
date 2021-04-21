@@ -4,7 +4,13 @@
     name:
       - ranger
 
-- name: common desktop environment
+- name: system-wide locale
+  copy:
+    src: locale
+    dest: /etc/default/locale
+    mode: "0644"
+
+- name: system-wide desktop environment
   copy:
     src: environment
     dest: /etc/environment
