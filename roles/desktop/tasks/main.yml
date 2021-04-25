@@ -3,6 +3,7 @@
   apt:
     name:
       - ranger
+      - vlc
 
 - name: system-wide locale
   copy:
