@@ -2,6 +2,7 @@
 - name: install desktop packages
   apt:
     name:
+      - acpi
       - ranger
       - vlc
 
