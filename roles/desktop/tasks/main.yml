@@ -3,6 +3,7 @@
   apt:
     name:
       - acpi
+      - pavucontrol
       - ranger
       - vlc
 
