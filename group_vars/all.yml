@@ -1,7 +1,7 @@
 ---
 # https://github.com/alacritty/alacritty/releases
 alacritty:
-  revision: 0.7.2
+  revision: 0.8.0
   src: /opt/src/alacritty
   prefix: /opt/alacritty
 
@@ -12,7 +12,7 @@ aws_cli:
 
 # https://github.com/99designs/aws-vault/releases
 aws_vault:
-  revision: v6.3.0
+  revision: v6.3.1
 
 # https://github.com/docker/compose/releases
 docker_compose:
@@ -30,12 +30,12 @@ jetbrains_mono:
 # https://julialang.org/downloads/
 julia:
   version: "1.6"
-  revision: 1.6.0
+  revision: 1.6.1
   prefix: /opt/julia
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
-  revision: 3.14.4
+  revision: 3.16.0
   src: /opt/src/rebar3
 
 # https://ziglang.org/download/
