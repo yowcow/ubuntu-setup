@@ -16,7 +16,7 @@ aws_vault:
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: 1.28.6
+  revision: 1.29.2
 
 # https://github.com/elm/compiler/releases
 elm:
@@ -35,7 +35,7 @@ julia:
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
-  revision: 3.16.0
+  revision: 3.16.1
   src: /opt/src/rebar3
 
 # https://ziglang.org/download/
@@ -47,7 +47,7 @@ zig:
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
-  revision: 24.0-1
+  revision: 24.0.2-1
 
 # https://github.com/vivien/i3blocks/releases
 # https://github.com/yowcow/i3blocks-deb/releases
