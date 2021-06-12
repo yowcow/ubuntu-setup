@@ -12,6 +12,7 @@
     ## compilers/runtimes
     - elm
     - erlang
+    - haskell
     - julia
     - nodejs
     - perl
