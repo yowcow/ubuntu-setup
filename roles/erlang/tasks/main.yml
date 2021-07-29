@@ -10,3 +10,4 @@
         deb: "https://github.com/yowcow/erlang-deb/releases/download/{{ yowcow_erlang.revision }}/yowcow-erlang_{{ yowcow_erlang.revision }}_amd64.deb"
 
 - include: rebar3.yml
+- include: erlgrind.yml

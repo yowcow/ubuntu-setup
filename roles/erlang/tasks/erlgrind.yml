@@ -1,0 +1,5 @@
+- name: fetch and install erlgrind
+  get_url:
+    dest: /usr/local/bin/erlgrind
+    url: https://raw.githubusercontent.com/isacssouza/erlgrind/master/src/erlgrind
+    mode: "0755"
