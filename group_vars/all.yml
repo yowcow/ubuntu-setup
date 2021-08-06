@@ -24,13 +24,13 @@ elm:
 
 # https://github.com/JetBrains/JetBrainsMono/releases
 jetbrains_mono:
-  revision: "2.225"
+  revision: "2.242"
   prefix: /usr/local/share/fonts/jetbrains-mono
 
 # https://julialang.org/downloads/
 julia:
   version: "1.6"
-  revision: 1.6.1
+  revision: 1.6.2
   prefix: /opt/julia
 
 # https://github.com/erlang/rebar3/releases
@@ -47,7 +47,7 @@ zig:
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
-  revision: 24.0.3-1
+  revision: 24.0.5-1
 
 # https://github.com/vivien/i3blocks/releases
 # https://github.com/yowcow/i3blocks-deb/releases
