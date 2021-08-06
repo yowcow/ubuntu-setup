@@ -19,7 +19,7 @@
     - php
     - python
     - rust
-    - ziglang
+    #- ziglang
     ## tools/apps
     - aws
     - google-cloud

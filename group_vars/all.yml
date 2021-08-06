@@ -38,11 +38,11 @@ rebar3:
   revision: 3.16.1
   src: /opt/src/rebar3
 
-# https://ziglang.org/download/
-# curl -sSL https://ziglang.org/download/index.json | jq -r .master.version
-zig:
-  src: /opt/src/zig
-  prefix: /opt/zig
+## https://ziglang.org/download/
+## curl -sSL https://ziglang.org/download/index.json | jq -r .master.version
+#zig:
+#  src: /opt/src/zig
+#  prefix: /opt/zig
 
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
