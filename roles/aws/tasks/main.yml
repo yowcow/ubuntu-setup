@@ -1,2 +1,3 @@
 - include: aws-cli.yml
 - include: aws-vault.yml
+- include: aws-copilot.yml

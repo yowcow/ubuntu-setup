@@ -1,0 +1,5 @@
+- name: install aws-copilot
+  get_url:
+    url: "https://github.com/aws/copilot-cli/releases/latest/download/copilot-linux"
+    dest: /usr/local/bin/copilot
+    mode: "0755"
