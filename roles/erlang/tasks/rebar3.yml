@@ -10,6 +10,9 @@
         repo: https://github.com/erlang/rebar3.git
         dest: "{{ rebar3.src }}"
         version: "{{ rebar3.revision }}"
+    - file:
+        path: "{{ rebar3.src }}/_build"
+        state: absent
     - shell:
         chdir: "{{ rebar3.src }}"
         cmd: ./bootstrap
