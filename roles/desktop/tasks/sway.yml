@@ -3,10 +3,14 @@
   apt:
     name:
       - blueman
+      - brightnessctl
       - kanshi
       - suckless-tools
       - sway
+      - sway-backgrounds
+      - swaybg
       - swayidle
       - swaylock
       - waybar
+      - wdisplays
       - wofi

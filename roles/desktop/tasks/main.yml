@@ -25,7 +25,7 @@
 - include: fonts.yml
 - include: gnome.yml
 #- include: regolith.yml
-- include: i3.yml
-- include: mozc.yml
-#- include: sway.yml
+#- include: i3.yml
+#- include: mozc.yml
+- include: sway.yml
 #- include: wine.yml
