@@ -1,0 +1,4 @@
+- include: cgroup1.yml
+
+- name: update-grub
+  shell: update-grub

@@ -41,6 +41,7 @@
   gather_facts: no
   roles:
     - docker
+    - grub
 
 - name: apply configuration to production
   hosts: production

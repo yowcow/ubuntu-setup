@@ -1,0 +1,6 @@
+# check to see if cgroup1 is enforced:
+#   mount -l | grep cgroup
+- name: force cgroup v1
+  copy:
+    src: cgroup1.cfg
+    dest: /etc/default/grub.d/cgroup1.cfg
