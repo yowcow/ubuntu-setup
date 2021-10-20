@@ -46,3 +46,4 @@
     dest: "/opt/i3ipc-python"
 
 - include: i3blocks.yml
+- include: fcitx-mozc.yml

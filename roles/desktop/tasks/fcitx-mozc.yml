@@ -19,3 +19,9 @@
       - uim
       - uim-mozc
     state: absent
+
+- name: system-wide desktop environment
+  copy:
+    src: environment/99-fcitx.conf
+    dest: /etc/environment.d/99-fcitx.conf
+    mode: "0644"
