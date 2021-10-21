@@ -1,3 +1,8 @@
+- file:
+    path: /usr/local/lib/docker/cli-plugins
+    state: directory
+
 #- include: docker-ce.yml
 - include: docker-io.yml
+- include: docker-buildx.yml
 - include: docker-compose.yml

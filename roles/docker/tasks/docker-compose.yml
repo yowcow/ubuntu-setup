@@ -1,6 +1,6 @@
 - name: check installed docker-compose revision
   shell:
-    cmd: "(docker-compose --version || true) 2>/dev/null"
+    cmd: "(docker compose version || true) 2>/dev/null"
   register: installed_revision
 
 - name: install docker-compose
@@ -8,5 +8,5 @@
   block:
     - get_url:
         url: "https://github.com/docker/compose/releases/download/{{ docker_compose.revision }}/docker-compose-Linux-x86_64"
-        dest: /usr/local/bin/docker-compose
+        dest: /usr/local/lib/docker/cli-plugins/docker-compose
         mode: "0755"

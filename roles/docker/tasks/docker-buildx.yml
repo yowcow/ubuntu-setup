@@ -1,0 +1,12 @@
+- name: check installed docker-buildx revision
+  shell:
+    cmd: "(docker buildx version || true) 2>/dev/null"
+  register: installed_revision
+
+- name: install docker-buildx
+  when: installed_revision.stdout.find(docker_buildx.revision) == -1
+  block:
+    - get_url:
+        url: "https://github.com/docker/buildx/releases/download/{{ docker_buildx.revision }}/buildx-{{ docker_buildx.revision }}.linux-amd64"
+        dest: /usr/local/lib/docker/cli-plugins/docker-buildx
+        mode: "0755"

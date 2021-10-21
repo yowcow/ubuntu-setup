@@ -16,7 +16,11 @@ aws_vault:
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: 1.29.2
+  revision: v2.0.1
+
+# https://github.com/docker/buildx/releases
+docker_buildx:
+  revision: v0.6.3
 
 # https://github.com/elm/compiler/releases
 elm:
