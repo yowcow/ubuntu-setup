@@ -24,4 +24,4 @@
       - evtest
       - libinput-tools
 
-- include: fcitx-mozc.yml
+- include: fcitx5-mozc.yml

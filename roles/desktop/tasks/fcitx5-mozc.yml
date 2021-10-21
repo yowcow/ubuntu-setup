@@ -1,0 +1,12 @@
+---
+- name: install fcitx5 packages
+  apt:
+    name:
+      - fcitx5-mozc
+      - im-config
+
+- name: system-wide desktop environment
+  copy:
+    src: environment-fcitx5
+    dest: /etc/environment
+    mode: "0644"

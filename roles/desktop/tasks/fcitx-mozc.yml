@@ -22,6 +22,6 @@
 
 - name: system-wide desktop environment
   copy:
-    src: environment
+    src: environment-fcitx
     dest: /etc/environment
     mode: "0644"
