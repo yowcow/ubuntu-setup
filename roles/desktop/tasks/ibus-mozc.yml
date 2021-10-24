@@ -1,0 +1,6 @@
+---
+- name: ibus packages
+  apt:
+    name:
+      - ibus
+      - ibus-mozc
