@@ -23,5 +23,3 @@
     name:
       - evtest
       - libinput-tools
-
-- include: fcitx5-mozc.yml

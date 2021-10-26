@@ -5,8 +5,11 @@
       - fcitx5-mozc
       - im-config
 
-- name: system-wide desktop environment
-  copy:
-    src: environment-fcitx5
-    dest: /etc/environment
-    mode: "0644"
+- name: set fcitx as system-wide im
+  vars:
+    im: fcitx
+  block:
+    - template:
+        src: environment.j2
+        dest: /etc/environment
+        mode: "0644"

@@ -7,4 +7,3 @@
       - uuid-runtime
 
 - include: gnome-goph.yml
-- include: ibus-mozc.yml
