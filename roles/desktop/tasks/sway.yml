@@ -23,3 +23,5 @@
     name:
       - evtest
       - libinput-tools
+
+- include: sway-build.yml
