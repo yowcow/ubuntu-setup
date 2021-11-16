@@ -16,11 +16,11 @@ aws_vault:
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: v2.0.1
+  revision: v2.1.1
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
-  revision: v0.6.3
+  revision: v0.7.0
 
 # https://github.com/elm/compiler/releases
 elm:
@@ -34,7 +34,7 @@ jetbrains_mono:
 # https://julialang.org/downloads/
 julia:
   version: "1.6"
-  revision: 1.6.2
+  revision: 1.6.3
   prefix: /opt/julia
 
 # https://github.com/erlang/rebar3/releases
@@ -51,7 +51,7 @@ rebar3:
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
-  revision: 24.1.4-1
+  revision: 24.1.5-1
 
 # https://github.com/vivien/i3blocks/releases
 # https://github.com/yowcow/i3blocks-deb/releases
