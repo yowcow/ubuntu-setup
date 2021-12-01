@@ -10,3 +10,11 @@
         url: "https://github.com/docker/buildx/releases/download/{{ docker_buildx.revision }}/buildx-{{ docker_buildx.revision }}.linux-amd64"
         dest: /usr/local/lib/docker/cli-plugins/docker-buildx
         mode: "0755"
+
+- name: install buildx apt requirements
+  apt:
+    name:
+      - binfmt-support
+      - debootstrap
+      - qemu
+      - qemu-user-static
