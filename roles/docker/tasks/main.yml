@@ -1,5 +1,11 @@
-- file:
+- name: create docker plugin directory
+  file:
     path: /usr/local/lib/docker/cli-plugins
+    state: directory
+
+- name: create docker config directory
+  file:
+    path: /etc/docker
     state: directory
 
 - name: store docker global config
