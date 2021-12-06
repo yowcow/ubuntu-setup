@@ -2,6 +2,11 @@
     path: /usr/local/lib/docker/cli-plugins
     state: directory
 
+- name: store docker global config
+  copy:
+    src: daemon.json
+    dest: /etc/docker/daemon.json
+
 #- include: docker-ce.yml
 - include: docker-io.yml
 - include: docker-buildx.yml
