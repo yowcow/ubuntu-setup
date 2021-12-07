@@ -1,0 +1,4 @@
+- name: install snap utilities
+  snap:
+    name:
+      - ttyplot

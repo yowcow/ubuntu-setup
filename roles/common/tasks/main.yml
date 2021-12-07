@@ -76,4 +76,5 @@
 
 - include: mysql.yml
 - include: psql.yml
+- include: snap.yml
 - include: sysstat.yml
