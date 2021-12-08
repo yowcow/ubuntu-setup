@@ -38,6 +38,7 @@
       - man
       - ncal
       - netbase
+      - netcat
       - pkg-config
       - ripgrep
       - rsync
