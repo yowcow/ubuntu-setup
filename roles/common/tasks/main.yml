@@ -8,6 +8,7 @@
 - name: install packages
   apt:
     name:
+      - apache2-utils
       - apt-transport-https
       - autoconf
       - automake
@@ -27,10 +28,10 @@
       - g++
       - gawk
       - git
-      - golang
-      - gpg
       - gnupg-agent
       - gnupg2
+      - golang
+      - gpg
       - htop
       - jq
       - links
@@ -56,8 +57,8 @@
       - tzdata
       - uuid-runtime
       - valgrind
-      - whois
       - weechat
+      - whois
       - zip
       - zsh
 
