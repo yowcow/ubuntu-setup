@@ -1,0 +1,4 @@
+- name: override resolv.conf
+  copy:
+    src: resolv.conf
+    dest: /etc/resolv.conf
