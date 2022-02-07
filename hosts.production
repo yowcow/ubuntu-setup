@@ -1,2 +1,0 @@
-[production]
-localhost ansible_connection=local
