@@ -1,0 +1,28 @@
+development:
+  hosts:
+    localhost:
+      ansible_connection: local
+      resolv:
+        nameservers:
+          - 127.0.0.53
+          - 1.1.1.1
+          - 1.0.0.1
+      users:
+        - user: vagrant
+          groups:
+            - docker
+            - sudo
+      ufw:
+        default: allow
+        logging: low
+        rules:
+          - to_port: 22
+            rule: allow
+          - to_port: 80
+            rule: allow
+          - to_port: 443
+            rule: allow
+          - to_port: 2222
+            rule: allow
+          - to_port: 6697
+            rule: allow
