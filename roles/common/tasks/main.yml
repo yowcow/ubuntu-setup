@@ -79,5 +79,4 @@
 - include: mysql.yml
 - include: psql.yml
 - include: snap.yml
-- include: resolv.yml
 - include: sysstat.yml

@@ -1,0 +1,19 @@
+laptop:
+  hosts:
+    localhost:
+      ansible_connection: local
+      resolv:
+        nameservers:
+          - 127.0.0.53
+          - 1.1.1.1
+          - 1.0.0.1
+      users:
+        - user: yowcow
+          groups:
+            - docker
+            - sudo
+            - video
+      ufw:
+        default: deny
+        logging: low
+        rules: []

@@ -1,8 +1,0 @@
-[laptop]
-localhost ansible_connection=local
-
-[development]
-localhost ansible_connection=local
-
-[production]
-localhost ansible_connection=local
