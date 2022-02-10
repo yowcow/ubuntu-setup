@@ -1,0 +1,5 @@
+- name: download the latest neovim
+  get_url:
+    url: "https://github.com/neovim/neovim/releases/download/{{ neovim.version }}/nvim.appimage"
+    dest: /usr/local/bin/nvim
+    mode: 0755

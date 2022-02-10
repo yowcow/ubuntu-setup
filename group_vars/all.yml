@@ -37,6 +37,10 @@ julia:
   revision: 1.6.3
   prefix: /opt/julia
 
+# https://github.com/neovim/neovim/releases
+neovim:
+  version: v0.6.1
+
 # https://github.com/erlang/rebar3/releases
 rebar3:
   revision: 3.18.0

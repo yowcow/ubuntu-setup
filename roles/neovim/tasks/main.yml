@@ -8,3 +8,5 @@
       - python3-pip
       - ruby
       - ruby-dev
+
+- include: latest.yml
