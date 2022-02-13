@@ -16,10 +16,9 @@
       - fonts-noto
       - fonts-noto-hinted
 
-- name: reject fonts
-  copy:
-    src: 70-rejected-fonts.conf
-    dest: /etc/fonts/conf.d/70-rejected-fonts.conf
-
-- include: fonts-jetbrains-mono.yml
-- include: fonts-pt-mono.yml
+#
+# `fc-list` to find font names
+#
+- include: ibm-plex.yml
+- include: jetbrains-mono.yml
+- include: pt-mono.yml

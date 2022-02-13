@@ -26,6 +26,11 @@ docker_buildx:
 elm:
   revision: 0.19.1
 
+# https://github.com/IBM/plex/releases
+ibm_plex:
+  revision: v6.0.0
+  prefix: /usr/local/share/fonts/ibm-plex
+
 # https://github.com/JetBrains/JetBrainsMono/releases
 jetbrains_mono:
   revision: "2.242"

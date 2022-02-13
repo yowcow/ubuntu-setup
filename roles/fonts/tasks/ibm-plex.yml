@@ -1,0 +1,23 @@
+- name: Create IBM Plex install dir
+  file:
+    path: "{{ ibm_plex.prefix }}"
+    state: directory
+
+- name: Check if IBM Plex font is installed
+  shell:
+    cmd: "(cat {{ ibm_plex.prefix }}/revision || true) 2>/dev/null"
+  register: installed_revision
+
+- name: Install IBM Plex font if not installed
+  when: installed_revision.stdout.find(ibm_plex.revision) == -1
+  block:
+    - get_url:
+        url: "https://github.com/IBM/plex/releases/download/{{ ibm_plex.revision }}/OpenType.zip"
+        dest: /tmp/IBM-Plex-OpenType.zip
+    - unarchive:
+        src: /tmp/IBM-Plex-OpenType.zip
+        dest: "{{ ibm_plex.prefix }}"
+    - copy:
+        dest: "{{ ibm_plex.prefix }}/revision"
+        content: "{{ ibm_plex.revision }}"
+    - command: fc-cache

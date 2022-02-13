@@ -35,6 +35,7 @@
   gather_facts: no
   roles:
     - desktop
+    - fonts
 
 - name: apply configuration to development
   hosts: development
