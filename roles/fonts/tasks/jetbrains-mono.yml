@@ -1,4 +1,4 @@
-- name: Create /usr/local/share/fonts/pt-mono
+- name: Create install dir
   file:
     path: "{{ jetbrains_mono.prefix }}"
     state: directory
