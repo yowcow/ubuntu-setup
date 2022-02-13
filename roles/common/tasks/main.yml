@@ -35,6 +35,7 @@
       - htop
       - jq
       - links
+      - lua5.4
       - lynx
       - man
       - ncal
