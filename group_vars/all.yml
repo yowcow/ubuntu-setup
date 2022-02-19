@@ -46,6 +46,24 @@ julia:
 neovim:
   version: v0.6.1
 
+# https://github.com/ryanoasis/nerd-fonts/releases
+nerd_fonts:
+  revision: v2.1.0
+  prefix: /usr/local/share/fonts/nerd-fonts
+  families:
+    - Agave
+    - AnonymousPro
+    - Cousine
+    - DaddyTimeMono
+    - FiraMono
+    - Hack
+    - Hermit
+    - IBMPlexMono
+    - JetBrainsMono
+    - LiberationMono
+    - Mononoki
+    - UbuntuMono
+
 # https://github.com/erlang/rebar3/releases
 rebar3:
   revision: 3.18.0

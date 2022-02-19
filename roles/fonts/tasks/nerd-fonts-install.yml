@@ -1,0 +1,23 @@
+---
+- name: Check if {{ item }} Font is installed
+  shell:
+    cmd: "(cat {{ nerd_fonts.prefix }}/{{ item }}/revision || true) 2>/dev/null"
+  register: installed_revision
+
+- name: Install {{ item }} Font if not installed
+  when: installed_revision.stdout.find(nerd_fonts.revision) == -1
+  block:
+    - get_url:
+        url: "https://github.com/ryanoasis/nerd-fonts/releases/download/{{ nerd_fonts.revision }}/{{ item }}.zip"
+        dest: /tmp/{{ item }}.zip
+    - name: Create {{ item }} install dir
+      file:
+        path: "{{ nerd_fonts.prefix }}/{{ item }}"
+        state: directory
+    - unarchive:
+        src: /tmp/{{ item }}.zip
+        dest: "{{ nerd_fonts.prefix }}/{{ item }}"
+    - copy:
+        dest: "{{ nerd_fonts.prefix }}/{{ item }}/revision"
+        content: "{{ nerd_fonts.revision }}"
+    - command: fc-cache

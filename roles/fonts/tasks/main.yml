@@ -21,4 +21,5 @@
 #
 - include: ibm-plex.yml
 - include: jetbrains-mono.yml
+- include: nerd-fonts.yml
 - include: pt-mono.yml
