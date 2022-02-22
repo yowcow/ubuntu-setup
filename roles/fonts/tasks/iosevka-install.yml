@@ -1,0 +1,23 @@
+---
+- name: Check if {{ item }} Font is installed
+  shell:
+    cmd: "(cat {{ iosevka.prefix }}/{{ item }}/revision || true) 2>/dev/null"
+  register: installed_revision
+
+- name: Install {{ item }} Font if not installed
+  when: installed_revision.stdout.find(iosevka.revision) == -1
+  block:
+    - get_url:
+        url: "https://github.com/be5invis/Iosevka/releases/download/v{{ iosevka.revision }}/ttc-sgr-{{ item }}-{{ iosevka.revision }}.zip"
+        dest: /tmp/{{ item }}.zip
+    - name: Create {{ item }} install dir
+      file:
+        path: "{{ iosevka.prefix }}/{{ item }}"
+        state: directory
+    - unarchive:
+        src: /tmp/{{ item }}.zip
+        dest: "{{ iosevka.prefix }}/{{ item }}"
+    - copy:
+        dest: "{{ iosevka.prefix }}/{{ item }}/revision"
+        content: "{{ iosevka.revision }}"
+    - command: fc-cache

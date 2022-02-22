@@ -42,6 +42,15 @@ julia:
   revision: 1.6.3
   prefix: /opt/julia
 
+# https://github.com/be5invis/Iosevka/releases
+iosevka:
+  revision: 14.0.1
+  prefix: /usr/local/share/fonts/iosevka
+  families:
+    - iosevka-fixed-curly
+    - iosevka-fixed-ss06
+    - iosevka-fixed-ss15
+
 # https://github.com/neovim/neovim/releases
 neovim:
   version: v0.6.1
