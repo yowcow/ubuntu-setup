@@ -41,6 +41,7 @@
       - ncal
       - netbase
       - netcat
+      - pinentry-tty
       - pkg-config
       - ripgrep
       - rsync
