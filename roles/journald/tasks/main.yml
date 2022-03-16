@@ -1,0 +1,5 @@
+- name: Copy journald.conf to /etc/systemd/journald.conf
+  copy:
+    src: journald.conf
+    dest: /etc/systemd/journald.conf
+    mode: "0644"

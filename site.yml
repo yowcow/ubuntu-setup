@@ -7,9 +7,10 @@
     ## environment
     - apt
     - common
+    - journald
     - resolv
-    - users
     - ufw
+    - users
     ## compilers/runtimes
     - docker
     - elm
