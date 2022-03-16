@@ -1,3 +1,4 @@
+# Check disk usage: `journalctl --disk-usage`
 - name: Copy journald.conf to /etc/systemd/journald.conf
   copy:
     src: journald.conf
