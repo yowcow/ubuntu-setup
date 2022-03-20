@@ -78,12 +78,6 @@ rebar3:
   revision: 3.18.0
   src: /opt/src/rebar3
 
-## https://ziglang.org/download/
-## curl -sSL https://ziglang.org/download/index.json | jq -r .master.version
-#zig:
-#  src: /opt/src/zig
-#  prefix: /opt/zig
-
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
@@ -93,3 +87,13 @@ yowcow_erlang:
 # https://github.com/yowcow/i3blocks-deb/releases
 yowcow_i3blocks:
   revision: 1.5-3
+
+# https://github.com/wez/wezterm/releases
+wezterm:
+  revision: 20220319-142410-0fcdea07
+
+## https://ziglang.org/download/
+## curl -sSL https://ziglang.org/download/index.json | jq -r .master.version
+#zig:
+#  src: /opt/src/zig
+#  prefix: /opt/zig

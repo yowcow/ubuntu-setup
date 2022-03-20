@@ -37,6 +37,7 @@
   roles:
     - desktop
     - fonts
+    - wezterm
 
 - name: apply configuration to development
   hosts: development
