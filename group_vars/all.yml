@@ -12,15 +12,15 @@ aws_cli:
 
 # https://github.com/99designs/aws-vault/releases
 aws_vault:
-  revision: v6.5.0
+  revision: v6.6.0
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: v2.3.1
+  revision: v2.3.4
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
-  revision: v0.7.0
+  revision: v0.8.1
 
 # https://github.com/elm/compiler/releases
 elm:
@@ -81,7 +81,7 @@ rebar3:
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
-  revision: 24.2.2-1
+  revision: 24.3.3-1
 
 # https://github.com/vivien/i3blocks/releases
 # https://github.com/yowcow/i3blocks-deb/releases
