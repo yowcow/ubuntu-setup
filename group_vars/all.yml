@@ -16,7 +16,7 @@ aws_vault:
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: v2.3.4
+  revision: v2.4.1
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
@@ -90,7 +90,7 @@ yowcow_i3blocks:
 
 # https://github.com/wez/wezterm/releases
 wezterm:
-  revision: 20220319-142410-0fcdea07
+  revision: 20220408-101518-b908e2dd
 
 ## https://ziglang.org/download/
 ## curl -sSL https://ziglang.org/download/index.json | jq -r .master.version
