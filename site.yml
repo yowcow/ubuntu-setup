@@ -8,7 +8,6 @@
     - apt
     - common
     - journald
-    - resolv
     - ufw
     - users
     ## compilers/runtimes
@@ -53,4 +52,5 @@
   roles:
     - certbot
     - nginx
+    - resolv
     - znc
