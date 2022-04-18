@@ -34,6 +34,8 @@
   become: yes
   gather_facts: no
   roles:
+    - alacritty
+    - bluetooth
     - desktop
     - fonts
     - wezterm

@@ -13,7 +13,6 @@
     dest: /etc/default/locale
     mode: "0644"
 
-- include: alacritty.yml
 - include: backlight.yml
 - include: ctrl-nocaps.yml
 - include: fonts.yml

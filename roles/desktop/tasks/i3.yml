@@ -2,8 +2,6 @@
 - name: install packages for i3
   apt:
     name:
-      - blueman
-      - bluez
       - i3
       - i3lock
       - i3-wm
