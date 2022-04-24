@@ -1,4 +1,5 @@
 - name: install packages for postgresql client
   apt:
     name:
-      - postgresql-client-12
+      - postgresql-client
+      - postgresql-client-common

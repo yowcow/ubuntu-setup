@@ -1,8 +1,0 @@
-- name: Create iosevka-fonts install dir
-  file:
-    path: "{{ iosevka.prefix }}"
-    state: directory
-
-- name: Work on iosevka-fonts
-  with_items: "{{ iosevka.families }}"
-  include: "iosevka-install.yml item={{ item }}"

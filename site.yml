@@ -13,7 +13,7 @@
     ## compilers/runtimes
     - docker
     - elm
-    - erlang
+    #- erlang
     - haskell
     - julia
     - nodejs
@@ -27,7 +27,6 @@
     - google-cloud
     - neovim
     - protobuf
-    - universal-ctags
 
 - name: apply configuration to laptop
   hosts: laptop
