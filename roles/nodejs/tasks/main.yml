@@ -5,4 +5,5 @@
       - nodejs
       - npm
 
-- include: puppeteer.yml
+# XXX
+#- include: puppeteer.yml
