@@ -1,7 +1,7 @@
 ---
 # https://github.com/alacritty/alacritty/releases
 alacritty:
-  revision: 0.9.0
+  revision: 0.10.1
   src: /opt/src/alacritty
   prefix: /opt/alacritty
 
@@ -16,20 +16,15 @@ aws_vault:
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: v2.4.1
+  revision: v2.5.0
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
-  revision: v0.8.1
+  revision: v0.8.2
 
 # https://github.com/elm/compiler/releases
 elm:
   revision: 0.19.1
-
-# https://github.com/IBM/plex/releases
-ibm_plex:
-  revision: v6.0.0
-  prefix: /usr/local/share/fonts/ibm-plex
 
 # https://github.com/JetBrains/JetBrainsMono/releases
 jetbrains_mono:
@@ -42,36 +37,9 @@ julia:
   revision: 1.6.3
   prefix: /opt/julia
 
-# https://github.com/be5invis/Iosevka/releases
-iosevka:
-  revision: 14.0.1
-  prefix: /usr/local/share/fonts/iosevka
-  families:
-    - iosevka-fixed-curly
-    - iosevka-fixed-ss06
-    - iosevka-fixed-ss15
-
 # https://github.com/neovim/neovim/releases
 neovim:
-  version: v0.6.1
-
-# https://github.com/ryanoasis/nerd-fonts/releases
-nerd_fonts:
-  revision: v2.1.0
-  prefix: /usr/local/share/fonts/nerd-fonts
-  families:
-    - Agave
-    - AnonymousPro
-    - Cousine
-    - DaddyTimeMono
-    - FiraMono
-    - Hack
-    - Hermit
-    - IBMPlexMono
-    - JetBrainsMono
-    - LiberationMono
-    - Mononoki
-    - UbuntuMono
+  version: v0.7.0
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
