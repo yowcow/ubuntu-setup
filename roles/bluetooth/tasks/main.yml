@@ -1,14 +1,9 @@
 ---
-- name: add ppa:berglh/pulseaudio-a2dp
-  ansible.builtin.apt_repository:
-    repo: 'ppa:berglh/pulseaudio-a2dp'
-    filename: berglh-ubuntu-pulseaudio-a2dp
-
 - name: install packages for bluetooth
   apt:
     name:
       - blueman
       - bluez
       - bluez-tools
-      - libldac
-      - pulseaudio-modules-bt
+
+#- include: a2dp.yml

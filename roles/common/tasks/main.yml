@@ -71,6 +71,11 @@
       - libxml2-dev
       - libxml2-utils
 
+- name: install packages for AppImage support
+  apt:
+    name:
+      - libfuse2
+
 - name: install basic fonts
   apt:
     name:

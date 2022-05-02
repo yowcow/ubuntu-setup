@@ -19,8 +19,4 @@
 #
 # `fc-list` to find font names
 #
-- include: ibm-plex.yml
-- include: iosevka.yml
 - include: jetbrains-mono.yml
-- include: nerd-fonts.yml
-- include: pt-mono.yml

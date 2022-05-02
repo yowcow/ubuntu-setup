@@ -1,8 +1,0 @@
-- name: Create nerd-fonts install dir
-  file:
-    path: "{{ nerd_fonts.prefix }}"
-    state: directory
-
-- name: Work on nerd-fonts
-  with_items: "{{ nerd_fonts.families }}"
-  include: "nerd-fonts-install.yml item={{ item }}"

@@ -27,7 +27,6 @@
     - google-cloud
     - neovim
     - protobuf
-    - universal-ctags
 
 - name: apply configuration to laptop
   hosts: laptop
