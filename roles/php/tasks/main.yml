@@ -3,4 +3,5 @@
     name:
       - composer
       - php-cli
+      - php-mysql
       - php-xml
