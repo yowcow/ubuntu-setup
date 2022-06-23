@@ -1,11 +1,18 @@
-- name: update apt cache
-  apt:
-    update_cache: yes
-
-- name: install apt-related packages
+- name: install apt packages
   apt:
     name:
       - apt-file
+      - apt-transport-https
+      - ca-certificates
+      - gnupg
+      - software-properties-common
+
+- include: hashicorp.yml
+- include: google-cloud-sdk.yml
+
+- name: update apt cache
+  apt:
+    update_cache: yes
 
 - name: update apt-file cache
   command:

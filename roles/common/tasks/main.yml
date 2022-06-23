@@ -83,6 +83,12 @@
       - fonts-liberation
       - fonts-noto
 
+- name: install 3rd-party packages
+  apt:
+    name:
+      - google-cloud-sdk
+      - terraform
+
 - include: mysql.yml
 - include: psql.yml
 - include: snap.yml
