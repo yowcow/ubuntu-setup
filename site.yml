@@ -24,7 +24,6 @@
     #- ziglang
     ## tools/apps
     - aws
-    - google-cloud
     - neovim
     - protobuf
 
