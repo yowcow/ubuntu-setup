@@ -1,5 +1,9 @@
-- name: download the latest wezterm
-  get_url:
-    url: "https://github.com/wez/wezterm/releases/download/{{ wezterm.revision }}/WezTerm-{{ wezterm.revision }}-Ubuntu18.04.AppImage"
-    dest: /usr/local/bin/wezterm
-    mode: 0755
+#- name: download the latest wezterm
+#  get_url:
+#    url: "https://github.com/wez/wezterm/releases/download/{{ wezterm.revision }}/WezTerm-{{ wezterm.revision }}-Ubuntu18.04.AppImage"
+#    dest: /usr/local/bin/wezterm
+#    mode: 0755
+
+- name: install wezterm deb
+  apt:
+    deb: "https://github.com/wez/wezterm/releases/download/{{ wezterm.revision }}/wezterm-nightly.Ubuntu22.04.deb"
