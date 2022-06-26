@@ -22,7 +22,9 @@ play: BOOK := site.yml
 play:
 	$(ANSIBLE_PLAYBOOK) $(BOOK) $(CHECK)
 
-role/%:
+roles/%: FORCE
 	$(ANSIBLE) $(GROUP) -m include_role -a name=$*
+
+FORCE:
 
 .PHONY: all play role/%

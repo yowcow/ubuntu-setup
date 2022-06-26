@@ -88,6 +88,7 @@
     name:
       - google-cloud-sdk
       - terraform
+      - terraform-ls
 
 - include: mysql.yml
 - include: psql.yml
