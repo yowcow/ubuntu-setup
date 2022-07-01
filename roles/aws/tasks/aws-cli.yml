@@ -28,5 +28,13 @@
         chdir: "{{ aws_cli.src }}/awscli-{{ latest_revision.json[0].name }}"
         cmd: "(which aws && ./aws/install --update) || ./aws/install"
 
-- name: clean-up old files
+- name: clean-up old src files
   command: "find {{ aws_cli.src }} -maxdepth 1 -ctime +30 -exec rm -rf {} \\;"
+
+- name: check current installations
+  shell:
+    cmd: "readlink -f /usr/local/aws-cli/v2/current"
+  register: current_install
+
+- name: clean-up old installations
+  command: "find /usr/local/aws-cli/v2 -mindepth 1 -maxdepth 1 -type d -not -path '{{ current_install.stdout }}' -exec rm -rf {} \\;"
