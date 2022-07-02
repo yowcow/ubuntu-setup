@@ -6,4 +6,4 @@
 
 - name: install wezterm deb
   apt:
-    deb: "https://github.com/wez/wezterm/releases/download/{{ wezterm.revision }}/wezterm-nightly.Ubuntu22.04.deb"
+    deb: "https://github.com/wez/wezterm/releases/download/{{ wezterm.revision }}/wezterm-{{ wezterm.revision }}.Ubuntu22.04.deb"
