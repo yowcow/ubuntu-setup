@@ -8,12 +8,11 @@ else ifeq ($(HOST),alpha-x28)
 GROUP := laptop
 endif
 
-ANSIBLE := ansible -i hosts/$(GROUP).yml -e 'ansible_python_interpreter=/usr/bin/python3'
-ANSIBLE_PLAYBOOK := ansible-playbook -i hosts/$(GROUP).yml -K -e 'ansible_python_interpreter=/usr/bin/python3' -l $(GROUP)
+ANSIBLE := ansible -i hosts/$(GROUP).yml
+ANSIBLE_PLAYBOOK := ansible-playbook -i hosts/$(GROUP).yml -K -l $(GROUP)
 
 all:
 	$(ANSIBLE) $(GROUP) -m ping
-	sudo $(MAKE) play-role GROUP=$(GROUP) ROLE=apt
 
 ifneq ($(DRYRUN),)
 play: CHECK := --check
