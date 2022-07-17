@@ -1,0 +1,11 @@
+- name: install pip3 packages for i3
+  pip:
+    name:
+      - i3ipc
+    executable: pip3
+    state: latest
+
+- name: fetch autotiling
+  git:
+    repo: https://github.com/nwg-piotr/autotiling.git
+    dest: "/opt/autotiling"

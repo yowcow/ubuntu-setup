@@ -25,3 +25,4 @@
       - libinput-tools
 
 - include: sway-build.yml
+- include: sway-autotiling.yml
