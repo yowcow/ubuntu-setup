@@ -15,6 +15,7 @@
       - fonts-liberation2
       - fonts-noto
       - fonts-noto-hinted
+      - fonts-powerline
 
 #
 # `fc-list` to find font names
