@@ -4,6 +4,12 @@
 #    dest: /usr/local/bin/wezterm
 #    mode: 0755
 
-- name: install wezterm deb
+- name: install wezterm
   apt:
     deb: "https://github.com/wez/wezterm/releases/download/{{ wezterm.revision }}/wezterm-{{ wezterm.revision }}.Ubuntu22.04.deb"
+
+- name: install wezterm nightly
+  get_url:
+    url: https://github.com/wez/wezterm/releases/download/nightly/WezTerm-nightly-Ubuntu18.04.AppImage
+    dest: /usr/local/bin/wezterm
+    mode: "0755"
