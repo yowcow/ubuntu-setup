@@ -16,11 +16,11 @@ aws_vault:
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: v2.6.1
+  revision: v2.11.2
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
-  revision: v0.8.2
+  revision: v0.9.1
 
 # https://github.com/elm/compiler/releases
 elm:
@@ -39,7 +39,7 @@ julia:
 
 # https://github.com/neovim/neovim/releases
 neovim:
-  version: v0.7.0
+  version: v0.8.0
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
@@ -58,7 +58,7 @@ yowcow_i3blocks:
 
 # https://github.com/wez/wezterm/releases
 wezterm:
-  revision: 20220624-141144-bd1b7c5d
+  revision: 20220905-102802-7d4b8249
 
 ## https://ziglang.org/download/
 ## curl -sSL https://ziglang.org/download/index.json | jq -r .master.version
