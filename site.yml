@@ -15,14 +15,11 @@
     - elm
     - erlang
     - haskell
-    - julia
     - nodejs
     - perl
     - php
     - podman
     - python
-    - rust
-    #- ziglang
     ## tools/apps
     - aws
     - neovim

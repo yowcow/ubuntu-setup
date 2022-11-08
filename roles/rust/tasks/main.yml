@@ -1,6 +1,0 @@
-- name: install packages for rust
-  apt:
-    name:
-      - rustc
-      - cargo
-      - cargo-doc

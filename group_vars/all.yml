@@ -31,12 +31,6 @@ jetbrains_mono:
   revision: "2.242"
   prefix: /usr/local/share/fonts/jetbrains-mono
 
-# https://julialang.org/downloads/
-julia:
-  version: "1.6"
-  revision: 1.6.3
-  prefix: /opt/julia
-
 # https://github.com/neovim/neovim/releases
 neovim:
   version: v0.8.0
@@ -59,9 +53,3 @@ yowcow_i3blocks:
 # https://github.com/wez/wezterm/releases
 wezterm:
   revision: 20220905-102802-7d4b8249
-
-## https://ziglang.org/download/
-## curl -sSL https://ziglang.org/download/index.json | jq -r .master.version
-#zig:
-#  src: /opt/src/zig
-#  prefix: /opt/zig
