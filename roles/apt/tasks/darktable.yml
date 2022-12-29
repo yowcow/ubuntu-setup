@@ -1,0 +1,14 @@
+- name: lsb_release -sr
+  shell:
+    cmd: "lsb_release -sr | tr -d '\n'"
+  register: lsb_release
+
+- name: add darktable apt key
+  ansible.builtin.apt_key:
+    url: https://download.opensuse.org/repositories/graphics:darktable/xUbuntu_{{ lsb_release.stdout }}/Release.key
+    keyring: /etc/apt/trusted.gpg.d/graphics_darktable.gpg
+    state: present
+
+- name: add darktable apt repository
+  ansible.builtin.apt_repository:
+    repo: "deb http://download.opensuse.org/repositories/graphics:/darktable/xUbuntu_{{ lsb_release.stdout }}/ /"
