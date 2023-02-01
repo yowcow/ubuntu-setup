@@ -6,4 +6,4 @@
       - bluez
       - bluez-tools
 
-#- include: a2dp.yml
+#- include_tasks: a2dp.yml

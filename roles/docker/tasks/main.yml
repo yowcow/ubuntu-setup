@@ -13,7 +13,7 @@
     src: daemon.json
     dest: /etc/docker/daemon.json
 
-#- include: docker-ce.yml
-- include: docker-io.yml
-- include: docker-buildx.yml
-- include: docker-compose.yml
+#- include_tasks: docker-ce.yml
+- include_tasks: docker-io.yml
+- include_tasks: docker-buildx.yml
+- include_tasks: docker-compose.yml

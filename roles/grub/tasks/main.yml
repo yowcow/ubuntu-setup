@@ -1,4 +1,4 @@
-- include: cgroup1.yml
+- include_tasks: cgroup1.yml
 
 - name: update-grub
   shell: update-grub

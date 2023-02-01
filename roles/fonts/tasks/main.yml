@@ -20,4 +20,4 @@
 #
 # `fc-list` to find font names
 #
-- include: jetbrains-mono.yml
+- include_tasks: jetbrains-mono.yml

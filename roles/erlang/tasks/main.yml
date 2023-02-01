@@ -9,5 +9,5 @@
     - apt:
         deb: "https://github.com/yowcow/erlang-deb/releases/download/{{ yowcow_erlang.revision }}/yowcow_erlang-{{ yowcow_erlang.revision }}.ubuntu22.04.amd64.deb"
 
-- include: rebar3.yml
-- include: erlgrind.yml
+- include_tasks: rebar3.yml
+- include_tasks: erlgrind.yml

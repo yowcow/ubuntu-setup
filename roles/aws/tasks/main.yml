@@ -1,3 +1,3 @@
-- include: aws-cli.yml
-- include: aws-vault.yml
-- include: aws-copilot.yml
+- include_tasks: aws-cli.yml
+- include_tasks: aws-vault.yml
+- include_tasks: aws-copilot.yml

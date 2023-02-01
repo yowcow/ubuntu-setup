@@ -14,17 +14,17 @@
     dest: /etc/default/locale
     mode: "0644"
 
-- include: backlight.yml
-- include: ctrl-nocaps.yml
-- include: fonts.yml
-#- include: wine.yml
+- include_tasks: backlight.yml
+- include_tasks: ctrl-nocaps.yml
+- include_tasks: fonts.yml
+#- include_tasks: wine.yml
 
 # desktops
-- include: gnome.yml
-- include: i3.yml
-- include: sway.yml
+- include_tasks: gnome.yml
+- include_tasks: i3.yml
+- include_tasks: sway.yml
 
 # im
-#- include: ibus-mozc.yml
-#- include: fcitx-mozc.yml
-- include: fcitx5-mozc.yml
+#- include_tasks: ibus-mozc.yml
+#- include_tasks: fcitx-mozc.yml
+- include_tasks: fcitx5-mozc.yml
