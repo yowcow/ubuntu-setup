@@ -9,4 +9,4 @@
       - ruby
       - ruby-dev
 
-- include: latest.yml
+- include_tasks: latest.yml

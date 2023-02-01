@@ -5,4 +5,4 @@
       - nodejs
       - npm
 
-- include: puppeteer.yml
+- include_tasks: puppeteer.yml

@@ -26,6 +26,6 @@
     src: nginx-logrotate
     dest: /etc/logrotate.d/nginx
 
-- include: nginx-ssl.yml
-- include: nginx-security.yml
-- include: nginx-compress.yml
+- include_tasks: nginx-ssl.yml
+- include_tasks: nginx-security.yml
+- include_tasks: nginx-compress.yml

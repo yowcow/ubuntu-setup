@@ -6,4 +6,4 @@
       - gnome-tweaks
       - uuid-runtime
 
-- include: gnome-goph.yml
+- include_tasks: gnome-goph.yml

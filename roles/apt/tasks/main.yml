@@ -7,9 +7,9 @@
       - gnupg
       - software-properties-common
 
-- include: darktable.yml
-- include: hashicorp.yml
-- include: google-cloud-sdk.yml
+- include_tasks: darktable.yml
+- include_tasks: hashicorp.yml
+- include_tasks: google-cloud-sdk.yml
 
 - name: update apt cache
   apt:

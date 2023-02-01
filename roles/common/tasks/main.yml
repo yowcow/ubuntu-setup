@@ -90,7 +90,7 @@
       - terraform
       - terraform-ls
 
-- include: mysql.yml
-- include: psql.yml
-- include: snap.yml
-- include: sysstat.yml
+- include_tasks: mysql.yml
+- include_tasks: psql.yml
+- include_tasks: snap.yml
+- include_tasks: sysstat.yml
