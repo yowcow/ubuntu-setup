@@ -11,8 +11,13 @@ endif
 ANSIBLE := ansible -i hosts/$(GROUP).yml
 ANSIBLE_PLAYBOOK := ansible-playbook -i hosts/$(GROUP).yml -K -l $(GROUP)
 
-all:
+all: install
 	$(ANSIBLE) $(GROUP) -m ping
+
+install:
+	apt-get install -y software-properties-common
+	add-apt-repository --yes --update ppa:ansible/ansible
+	apt-get install ansible
 
 ifneq ($(DRYRUN),)
 play: CHECK := --check
@@ -26,4 +31,4 @@ roles/%: FORCE
 
 FORCE:
 
-.PHONY: all play role/%
+.PHONY: all install play role/%

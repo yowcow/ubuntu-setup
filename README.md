@@ -15,7 +15,9 @@ Nodes (Groups)
 HOW TO INSTALL ANSIBLE
 ----------------------
 
-See https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu
+    make install
+
+Or see https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu
 
 
 HOW TO RUN
