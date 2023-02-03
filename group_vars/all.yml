@@ -1,7 +1,7 @@
 ---
 # https://github.com/alacritty/alacritty/releases
 alacritty:
-  revision: 0.10.1
+  revision: 0.11.0
   src: /opt/src/alacritty
   prefix: /opt/alacritty
 
@@ -12,15 +12,15 @@ aws_cli:
 
 # https://github.com/99designs/aws-vault/releases
 aws_vault:
-  revision: v6.6.0
+  revision: v6.6.2
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: v2.11.2
+  revision: v2.15.1
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
-  revision: v0.9.1
+  revision: v0.10.2
 
 # https://github.com/elm/compiler/releases
 elm:
@@ -33,7 +33,7 @@ jetbrains_mono:
 
 # https://github.com/neovim/neovim/releases
 neovim:
-  version: v0.8.0
+  version: v0.8.3
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
@@ -43,7 +43,7 @@ rebar3:
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
-  revision: 25.1.2-1
+  revision: 25.2.2-1
 
 # https://github.com/vivien/i3blocks/releases
 # https://github.com/yowcow/i3blocks-deb/releases
