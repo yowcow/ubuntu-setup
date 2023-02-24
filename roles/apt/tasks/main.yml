@@ -7,7 +7,6 @@
       - gnupg
       - software-properties-common
 
-- include_tasks: darktable.yml
 - include_tasks: hashicorp.yml
 - include_tasks: google-cloud-sdk.yml
 
