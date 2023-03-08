@@ -1,0 +1,8 @@
+#
+# https://askubuntu.com/questions/1436904/problem-with-sound-in-ubuntu-22-10
+#
+- name: touch /usr/share/pipewire/media-session.d/with-pulseaudio
+  ansible.builtin.file:
+    path: /usr/share/pipewire/media-session.d/with-pulseaudio
+    state: touch
+

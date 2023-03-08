@@ -11,10 +11,10 @@
         dest: /usr/local/lib/docker/cli-plugins/docker-buildx
         mode: "0755"
 
-- name: install buildx apt requirements
-  apt:
-    name:
-      - binfmt-support
-      - debootstrap
-      - qemu
-      - qemu-user-static
+#- name: install buildx apt requirements
+#  apt:
+#    name:
+#      - binfmt-support
+#      - debootstrap
+#      - qemu
+#      - qemu-user-static

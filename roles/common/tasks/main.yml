@@ -40,7 +40,7 @@
       - man
       - ncal
       - netbase
-      - netcat
+        #- netcat
       - pinentry-tty
       - pkg-config
       - ripgrep
