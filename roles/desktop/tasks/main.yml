@@ -27,5 +27,3 @@
 #- include_tasks: ibus-mozc.yml
 #- include_tasks: fcitx-mozc.yml
 - include_tasks: fcitx5-mozc.yml
-
-- include_tasks: pulse-audio.yml
