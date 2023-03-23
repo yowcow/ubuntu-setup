@@ -41,6 +41,7 @@
       - ncal
       - netbase
         #- netcat
+      - parallel
       - pinentry-tty
       - pkg-config
       - ripgrep
