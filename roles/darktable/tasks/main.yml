@@ -46,6 +46,11 @@
       - po4a
       - python3-jsonschema
 
+- name: install OpenCL
+  apt:
+    name:
+      - ocl-icd-opencl-dev
+
 - name: check installed darktable revision
   shell:
     cmd: "(/opt/darktable/bin/darktable --version | head -2 | tail -1 | cut -d' ' -f4 || true) 2>/dev/null"
