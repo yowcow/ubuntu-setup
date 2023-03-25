@@ -1,0 +1,11 @@
+# See ROCm docs for the latest info:
+# https://docs.amd.com/category/ROCm%E2%84%A2%20v5.x
+# https://docs.amd.com/bundle/ROCm-Installation-Guide-v5.4.3/page/How_to_Install_ROCm.html
+
+- name: add amdgpu apt repository
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64] https://repo.radeon.com/amdgpu/latest/ubuntu jammy main proprietary"
+
+- name: add rocm apt repository
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64] https://repo.radeon.com/rocm/apt/debian/ jammy main"

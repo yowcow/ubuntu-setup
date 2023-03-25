@@ -1,0 +1,19 @@
+- include_tasks: apt.yml
+
+## not sure if this is necessary
+#- name: install libffi7
+#  apt:
+#    deb: http://mirrors.edge.kernel.org/ubuntu/pool/main/libf/libffi/libffi7_3.3-4_amd64.deb
+
+## run the this for the driver installation:
+##   amdgpu-install --accept-eula --usecase=opencl --no-32
+- name: install amdgpu-install
+  apt:
+    name:
+      - amdgpu-install
+
+- name: install opencl support
+  apt:
+    name:
+      - mesa-opencl-icd
+      - ocl-icd-opencl-dev
