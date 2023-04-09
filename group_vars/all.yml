@@ -41,6 +41,10 @@ jetbrains_mono:
 neovim:
   version: v0.8.3
 
+# https://www.rawtherapee.com/downloads/
+rawtherapee:
+  revision: "5.9"
+
 # https://github.com/erlang/rebar3/releases
 rebar3:
   revision: 3.20.0

@@ -1,0 +1,5 @@
+- name: "download rawtherapee appimage"
+  get_url:
+    url: "https://rawtherapee.com/shared/builds/linux/RawTherapee_{{ rawtherapee.revision }}.AppImage"
+    dest: /usr/local/bin/rawtherapee
+    mode: 0755
