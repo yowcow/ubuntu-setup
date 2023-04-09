@@ -1,5 +1,11 @@
 - name: "download rawtherapee appimage"
-  get_url:
+  ansible.builtin.get_url:
     url: "https://rawtherapee.com/shared/builds/linux/RawTherapee_{{ rawtherapee.revision }}.AppImage"
     dest: /usr/local/bin/rawtherapee
-    mode: 0755
+    mode: "0755"
+
+- name: "install rawtherapee desktop entry"
+  ansible.builtin.copy:
+    src: files/rawtherapee.desktop
+    dest: /usr/local/share/applications/rawtherapee.desktop
+    mode: "0644"
