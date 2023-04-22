@@ -1,3 +1,9 @@
+- name: install packages to build wayland-protocols
+  apt:
+    name:
+      - libwayland-bin
+      - libwayland-dev
+
 # https://gitlab.freedesktop.org/wayland/wayland-protocols
 - name: check installed wayland-protocols revision
   shell:

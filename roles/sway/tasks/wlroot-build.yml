@@ -6,6 +6,15 @@
       - libavcodec-dev
       - libavformat-dev
       - libavutil-dev
+      - libdrm-dev
+      - libgbm-dev
+      - libinput-dev
+      - libseat-dev
+      - libxcb-dri3-dev
+      - libxcb-present-dev
+      - libxcb-render-util0-dev
+      - libxcb-xinput-dev
+      - libxkbcommon-dev
       - meson
       - ninja-build
 
@@ -32,6 +41,8 @@
     - ansible.builtin.command:
         cmd: "ninja -C build-{{ wlroots.revision }}/ install"
         chdir: /opt/src/wlroots
+    - ansible.builtin.command:
+        cmd: "ldconfig"
     - ansible.builtin.file:
         path: /opt/wlroots
         state: directory

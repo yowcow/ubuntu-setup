@@ -9,6 +9,8 @@
       - libgdk-pixbuf2.0-dev
       - libjson-c-dev
       - libpango1.0-dev
+      - libxcb-icccm4-dev
+      - libsystemd-dev
       - meson
       - ninja-build
       - scdoc
