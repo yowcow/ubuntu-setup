@@ -60,6 +60,18 @@ yowcow_erlang:
 yowcow_i3blocks:
   revision: 1.5-3
 
+# https://gitlab.freedesktop.org/wayland/wayland-protocols
+wayland_protocols:
+  revision: '1.27'
+
+# https://gitlab.freedesktop.org/wlroots/wlroots
+wlroots:
+  revision: 0.16.2
+
+# https://github.com/swaywm/sway
+sway:
+  revision: 1.8.1
+
 # https://github.com/wez/wezterm/releases
 wezterm:
   revision: 20220905-102802-7d4b8249

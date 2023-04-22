@@ -35,6 +35,7 @@
     - desktop
     - darktable
     - fonts
+    - sway
     - wezterm
 
 - name: apply configuration to development

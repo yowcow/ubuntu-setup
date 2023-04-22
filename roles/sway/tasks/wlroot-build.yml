@@ -1,0 +1,41 @@
+# https://gitlab.freedesktop.org/wlroots/wlroots
+- name: install packages to build wlroots
+  apt:
+    name:
+      - hwdata
+      - libavcodec-dev
+      - libavformat-dev
+      - libavutil-dev
+      - meson
+      - ninja-build
+
+- name: check installed wlroots revision
+  shell:
+    cmd: "(cat /opt/wlroots/version || true) 2>/dev/null"
+  register: installed_revision
+
+- name: build and install wlroots
+  when: installed_revision.stdout.find(wlroots.revision) == -1
+  block:
+    - ansible.builtin.git:
+        repo: "https://gitlab.freedesktop.org/wlroots/wlroots.git"
+        dest: /opt/src/wlroots
+        version: "{{ wlroots.revision }}"
+    - ansible.builtin.command:
+        cmd: "meson setup build-{{ wlroots.revision }}/"
+        chdir: /opt/src/wlroots
+        creates: "/opt/src/wlroots/build-{{ wlroots.revision }}"
+    - ansible.builtin.command:
+        cmd: "ninja -C build-{{ wlroots.revision }}/"
+        chdir: /opt/src/wlroots
+        creates: "/opt/src/wlroots/build-{{ wlroots.revision }}/.ninja_log"
+    - ansible.builtin.command:
+        cmd: "ninja -C build-{{ wlroots.revision }}/ install"
+        chdir: /opt/src/wlroots
+    - ansible.builtin.file:
+        path: /opt/wlroots
+        state: directory
+        mode: 0755
+    - ansible.builtin.copy:
+        dest: /opt/wlroots/version
+        content: "{{ wlroots.revision }}"

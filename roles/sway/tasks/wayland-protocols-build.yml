@@ -1,0 +1,31 @@
+# https://gitlab.freedesktop.org/wayland/wayland-protocols
+- name: check installed wayland-protocols revision
+  shell:
+    cmd: "(cat /opt/wayland-protocols/version || true) 2>/dev/null"
+  register: installed_revision
+
+- name: build and install wayland-protocols
+  when: installed_revision.stdout.find(wayland_protocols.revision) == -1
+  block:
+    - ansible.builtin.git:
+        repo: "https://gitlab.freedesktop.org/wayland/wayland-protocols.git"
+        dest: /opt/src/wayland-protocols
+        version: "{{ wayland_protocols.revision }}"
+    - ansible.builtin.command:
+        cmd: "meson setup build-{{ wayland_protocols.revision }}/"
+        chdir: /opt/src/wayland-protocols
+        creates: "/opt/src/wayland-protocols/build-{{ wayland_protocols.revision }}"
+    - ansible.builtin.command:
+        cmd: "ninja -C build-{{ wayland_protocols.revision }}/"
+        chdir: /opt/src/wayland-protocols
+        creates: "/opt/src/wayland-protocols/build-{{ wayland_protocols.revision }}/.ninja_log"
+    - ansible.builtin.command:
+        cmd: "ninja -C build-{{ wayland_protocols.revision }}/ install"
+        chdir: /opt/src/wayland-protocols
+    - ansible.builtin.file:
+        path: /opt/wayland-protocols
+        state: directory
+        mode: 0755
+    - ansible.builtin.copy:
+        dest: /opt/wayland-protocols/version
+        content: "{{ wayland_protocols.revision }}"

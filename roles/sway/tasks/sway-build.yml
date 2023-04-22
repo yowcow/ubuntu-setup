@@ -1,0 +1,45 @@
+- include_tasks: wayland-protocols-build.yml
+- include_tasks: wlroot-build.yml
+
+# https://github.com/swaywm/sway/blob/master/README.md
+- name: install packages to build sway
+  apt:
+    name:
+      - libcairo2-dev
+      - libgdk-pixbuf2.0-dev
+      - libjson-c-dev
+      - libpango1.0-dev
+      - meson
+      - ninja-build
+      - scdoc
+
+- name: check installed sway revision
+  shell:
+    cmd: "(cat /opt/sway/version || true) 2>/dev/null"
+  register: installed_revision
+
+- name: build and install sway
+  when: installed_revision.stdout.find(sway.revision) == -1
+  block:
+    - ansible.builtin.git:
+        repo: "https://github.com/swaywm/sway.git"
+        dest: /opt/src/sway
+        version: "{{ sway.revision }}"
+    - ansible.builtin.command:
+        cmd: "meson setup build-{{ sway.revision }}/"
+        chdir: /opt/src/sway
+        creates: "/opt/src/sway/build-{{ sway.revision }}"
+    - ansible.builtin.command:
+        cmd: "ninja -C build-{{ sway.revision }}/"
+        chdir: /opt/src/sway
+        creates: "/opt/src/sway/build-{{ sway.revision }}/.ninja_log"
+    - ansible.builtin.command:
+        cmd: "ninja -C build-{{ sway.revision }}/ install"
+        chdir: /opt/src/sway
+    - ansible.builtin.file:
+        path: /opt/sway
+        state: directory
+        mode: 0755
+    - ansible.builtin.copy:
+        dest: /opt/sway/version
+        content: "{{ sway.revision }}"
