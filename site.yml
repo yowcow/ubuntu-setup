@@ -35,7 +35,6 @@
     - desktop
     - darktable
     - fonts
-    - rawtherapee
     - wezterm
 
 - name: apply configuration to development
