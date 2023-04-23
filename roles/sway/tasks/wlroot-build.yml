@@ -10,13 +10,17 @@
       - libgbm-dev
       - libinput-dev
       - libseat-dev
+      - libxcb-composite0-dev
       - libxcb-dri3-dev
       - libxcb-present-dev
       - libxcb-render-util0-dev
+      - libxcb-res0-dev
+      - libxcb-util-dev
       - libxcb-xinput-dev
       - libxkbcommon-dev
       - meson
       - ninja-build
+      - xwayland
 
 - name: check installed wlroots revision
   shell:

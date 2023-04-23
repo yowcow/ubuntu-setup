@@ -66,7 +66,7 @@ wayland_protocols:
 
 # https://gitlab.freedesktop.org/wlroots/wlroots
 wlroots:
-  revision: 0.16.2
+  revision: 0.16.1
 
 # https://github.com/swaywm/sway
 sway:
