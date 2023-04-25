@@ -68,10 +68,6 @@ wayland_protocols:
 wlroots:
   revision: 0.16.1
 
-# https://github.com/swaywm/sway
+# https://github.com/swaywm/sway/releases
 sway:
   revision: 1.8.1
-
-# https://github.com/wez/wezterm/releases
-wezterm:
-  revision: 20220905-102802-7d4b8249
