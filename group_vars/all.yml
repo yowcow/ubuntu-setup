@@ -1,10 +1,4 @@
 ---
-# https://github.com/alacritty/alacritty/releases
-alacritty:
-  revision: 0.11.0
-  src: /opt/src/alacritty
-  prefix: /opt/alacritty
-
 # https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst
 # curl -sSL https://api.github.com/repos/aws/aws-cli/tags
 aws_cli:
@@ -12,7 +6,7 @@ aws_cli:
 
 # https://github.com/99designs/aws-vault/releases
 aws_vault:
-  revision: v6.6.2
+  revision: v7.2.0
 
 # https://github.com/darktable-org/darktable/releases
 darktable:
@@ -22,11 +16,11 @@ darktable:
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: v2.15.1
+  revision: v2.17.3
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
-  revision: v0.10.2
+  revision: v0.10.4
 
 # https://github.com/elm/compiler/releases
 elm:
@@ -34,16 +28,12 @@ elm:
 
 # https://github.com/JetBrains/JetBrainsMono/releases
 jetbrains_mono:
-  revision: "2.242"
+  revision: "2.304"
   prefix: /usr/local/share/fonts/jetbrains-mono
 
 # https://github.com/neovim/neovim/releases
 neovim:
-  version: v0.8.3
-
-# https://www.rawtherapee.com/downloads/
-rawtherapee:
-  revision: "5.9"
+  version: v0.9.0
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
