@@ -38,3 +38,7 @@
 
 - name: clean-up old installations
   command: "find /usr/local/aws-cli/v2 -mindepth 1 -maxdepth 1 -type d -not -path '{{ current_install.stdout }}' -exec rm -rf {} \\;"
+
+- name: install session manager plugin
+  apt:
+    deb: https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb
