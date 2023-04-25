@@ -60,11 +60,11 @@ yowcow_erlang:
 yowcow_i3blocks:
   revision: 1.5-3
 
-# https://gitlab.freedesktop.org/wayland/wayland-protocols
+# https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases
 wayland_protocols:
   revision: '1.27'
 
-# https://gitlab.freedesktop.org/wlroots/wlroots
+# https://gitlab.freedesktop.org/wlroots/wlroots/-/releases
 wlroots:
   revision: 0.16.1
 
