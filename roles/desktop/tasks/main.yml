@@ -20,7 +20,7 @@
 
 # desktops
 - include_tasks: gnome.yml
-- include_tasks: i3.yml
+#- include_tasks: i3.yml
 #- include_tasks: sway.yml
 
 # im

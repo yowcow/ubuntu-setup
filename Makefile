@@ -16,8 +16,8 @@ all: install
 
 install:
 	apt-get install -y software-properties-common
-	add-apt-repository --yes --update ppa:ansible/ansible
-	apt-get install ansible
+	#add-apt-repository --yes --update ppa:ansible/ansible
+	apt-get install -y ansible
 
 ifneq ($(DRYRUN),)
 play: CHECK := --check

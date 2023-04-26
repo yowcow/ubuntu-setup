@@ -1,9 +1,7 @@
 - name: install pip3 packages for i3
-  pip:
+  apt:
     name:
-      - i3ipc
-    executable: pip3
-    state: latest
+      - python3-i3ipc
 
 - name: fetch autotiling executable
   get_url:
