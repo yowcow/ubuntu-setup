@@ -3,6 +3,7 @@
   apt:
     name:
       - fcitx5-mozc
+      - fcitx5-skk
       - im-config
 
 - name: set fcitx as system-wide im
