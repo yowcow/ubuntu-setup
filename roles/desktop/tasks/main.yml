@@ -21,10 +21,6 @@
 
 # desktops
 - include_tasks: gnome.yml
-#- include_tasks: i3.yml
-#- include_tasks: sway.yml
 
 # im
-#- include_tasks: ibus-mozc.yml
-#- include_tasks: fcitx-mozc.yml
 - include_tasks: fcitx5-mozc.yml
