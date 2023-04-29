@@ -5,6 +5,8 @@
       - fcitx5-mozc
       - fcitx5-skk
       - im-config
+      - skkdic
+      - skkdic-extra
 
 - name: set fcitx as system-wide im
   vars:
