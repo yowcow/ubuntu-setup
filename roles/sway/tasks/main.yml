@@ -4,6 +4,7 @@
     name:
       - blueman
       - brightnessctl
+      - grim
       - kanshi
       - suckless-tools
       - sway
