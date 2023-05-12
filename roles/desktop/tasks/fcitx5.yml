@@ -10,7 +10,7 @@
 
 - name: set fcitx as system-wide im
   vars:
-    im: fcitx
+    im: fcitx5
   block:
     - template:
         src: environment.j2
