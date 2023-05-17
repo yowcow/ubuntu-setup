@@ -91,6 +91,7 @@
       - terraform
       - terraform-ls
 
+- include_tasks: flatpak.yml
 - include_tasks: mysql.yml
 - include_tasks: psql.yml
 - include_tasks: snap.yml
