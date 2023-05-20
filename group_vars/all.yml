@@ -16,7 +16,7 @@ darktable:
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: v2.17.3
+  revision: v2.18.1
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
@@ -37,13 +37,13 @@ neovim:
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
-  revision: 3.20.0
+  revision: 3.21.0
   src: /opt/src/rebar3
 
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
-  revision: 25.3.2-1
+  revision: 26.0-1
 
 # https://github.com/vivien/i3blocks/releases
 # https://github.com/yowcow/i3blocks-deb/releases
