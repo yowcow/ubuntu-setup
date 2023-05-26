@@ -20,7 +20,7 @@ docker_compose:
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
-  revision: v0.10.4
+  revision: v0.10.5
 
 # https://github.com/elm/compiler/releases
 elm:
