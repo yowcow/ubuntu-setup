@@ -41,6 +41,7 @@
       - ncal
       - netbase
         #- netcat
+      - nsnake
       - parallel
       - pinentry-tty
       - pkg-config
