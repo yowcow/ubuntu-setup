@@ -15,6 +15,7 @@
       - waybar
       - wdisplays
       - wofi
+      - xwayland
 
 # do something like:
 #   sudo evtest --grab /dev/input/event12
