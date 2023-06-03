@@ -6,6 +6,8 @@ else ifeq ($(HOST),dev-x28)
 GROUP := development
 else ifeq ($(HOST),alpha-x28)
 GROUP := laptop
+else ifeq ($(HOST),bravo-x28)
+GROUP := laptop
 endif
 
 ANSIBLE := ansible -i hosts/$(GROUP).yml
@@ -15,9 +17,7 @@ all: install
 	$(ANSIBLE) $(GROUP) -m ping
 
 install:
-	apt-get install -y software-properties-common
-	#add-apt-repository --yes --update ppa:ansible/ansible
-	apt-get install -y ansible
+	apt-get install -y ansible software-properties-common
 
 ifneq ($(DRYRUN),)
 play: CHECK := --check

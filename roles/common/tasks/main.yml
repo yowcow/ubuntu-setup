@@ -38,6 +38,7 @@
       - lua5.4
       - lynx
       - man
+      - meson
       - ncal
       - netbase
         #- netcat

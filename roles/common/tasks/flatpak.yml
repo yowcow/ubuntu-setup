@@ -3,3 +3,7 @@
     name:
       - flatpak
       - gnome-software-plugin-flatpak
+
+- name: add remote flathub
+  ansible.builtin.command:
+    cmd: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
