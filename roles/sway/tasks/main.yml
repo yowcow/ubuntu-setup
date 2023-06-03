@@ -26,4 +26,3 @@
       - libinput-tools
 
 - include_tasks: sway-autotiling.yml
-- include_tasks: sway-build.yml

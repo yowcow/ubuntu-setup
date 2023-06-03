@@ -49,15 +49,3 @@ yowcow_erlang:
 # https://github.com/yowcow/i3blocks-deb/releases
 yowcow_i3blocks:
   revision: 1.5-3
-
-# https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases
-wayland_protocols:
-  revision: '1.27'
-
-# https://gitlab.freedesktop.org/wlroots/wlroots/-/releases
-wlroots:
-  revision: 0.16.1
-
-# https://github.com/swaywm/sway/releases
-sway:
-  revision: 1.8.1
