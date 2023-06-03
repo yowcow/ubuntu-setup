@@ -8,6 +8,7 @@
       - pavucontrol
       - ranger
       - vlc
+      - weston
 
 - name: system-wide locale
   copy:
