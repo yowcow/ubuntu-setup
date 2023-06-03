@@ -4,6 +4,7 @@
     name:
       - acpi
       - gimp
+      - mesa-utils
       - pavucontrol
       - ranger
       - vlc
