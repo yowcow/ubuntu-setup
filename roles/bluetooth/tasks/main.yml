@@ -6,5 +6,3 @@
       - bluez
       - bluez-tools
       - libspa-0.2-bluetooth
-
-#- include_tasks: a2dp.yml
