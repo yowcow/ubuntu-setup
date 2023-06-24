@@ -3,5 +3,5 @@
     name:
       #- winbind
       - wine
-      #- wine32
-      #- winetricks
+      - wine32
+      - winetricks
