@@ -10,7 +10,7 @@ aws_vault:
 
 # https://github.com/darktable-org/darktable/releases
 darktable:
-  revision: 4.4.0
+  revision: 4.4.1
   src: /opt/src/darktable
   prefix: /opt/darktable
 
