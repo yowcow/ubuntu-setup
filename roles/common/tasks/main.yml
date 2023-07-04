@@ -86,6 +86,11 @@
       - fonts-liberation
       - fonts-noto
 
+- name: install pdf utilities
+  apt:
+    name:
+      - poppler-utils
+
 - name: install 3rd-party packages
   apt:
     name:
