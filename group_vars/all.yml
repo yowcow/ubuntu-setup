@@ -10,17 +10,17 @@ aws_vault:
 
 # https://github.com/darktable-org/darktable/releases
 darktable:
-  revision: 4.4.1
+  revision: 4.4.2
   src: /opt/src/darktable
   prefix: /opt/darktable
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: v2.18.1
+  revision: v2.20.2
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
-  revision: v0.11.1
+  revision: v0.11.2
 
 # https://github.com/elm/compiler/releases
 elm:
