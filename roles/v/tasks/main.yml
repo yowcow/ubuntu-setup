@@ -13,7 +13,6 @@
     - shell:
         chdir: "{{ v.src }}"
         cmd: make
-    - copy:
-        dest: /usr/local/bin/v
-        src: "{{ v.src }}/v"
-        mode: "0755"
+    - shell:
+        chdir: "{{ v.src }}"
+        cmd: ./v symlink
