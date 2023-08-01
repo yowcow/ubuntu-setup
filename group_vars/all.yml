@@ -40,6 +40,11 @@ rebar3:
   revision: 3.22.0
   src: /opt/src/rebar3
 
+# https://github.com/vlang/v/releases
+v:
+  revision: "0.4"
+  src: /opt/src/v
+
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
