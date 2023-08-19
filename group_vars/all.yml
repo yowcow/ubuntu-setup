@@ -50,11 +50,6 @@ v:
 yowcow_erlang:
   revision: 26.0.2-1
 
-# https://github.com/vivien/i3blocks/releases
-# https://github.com/yowcow/i3blocks-deb/releases
-yowcow_i3blocks:
-  revision: 1.5-3
-
 # https://github.com/swaywm/sway/releases
 # https://github.com/yowcow/swaywm-deb/releases
 yowcow_sway:
