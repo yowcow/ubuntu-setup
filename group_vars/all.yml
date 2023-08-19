@@ -54,3 +54,10 @@ yowcow_erlang:
 # https://github.com/yowcow/i3blocks-deb/releases
 yowcow_i3blocks:
   revision: 1.5-3
+
+# https://github.com/swaywm/sway/releases
+# https://github.com/yowcow/swaywm-deb/releases
+yowcow_sway:
+  revision:
+    sway: 1.8.1-1
+    wlroots: 0.16.2-1

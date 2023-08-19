@@ -1,0 +1,27 @@
+---
+- name: install packages for sway
+  apt:
+    name:
+      - blueman
+      - brightnessctl
+      - grim
+      - kanshi
+      - suckless-tools
+      #- sway
+      #- sway-backgrounds
+      - swaybg
+      - swayidle
+      - swaylock
+      - waybar
+      - wdisplays
+      - wofi
+      - xwayland
+
+# do something like:
+#   sudo evtest --grab /dev/input/event12
+#   sudo libinput debug-events --device /dev/input/event12
+- name: install input debugging utils
+  apt:
+    name:
+      - evtest
+      - libinput-tools

@@ -1,4 +1,4 @@
-- name: install pip3 packages for i3
+- name: install pip3 packages for i3ipc
   apt:
     name:
       - python3-i3ipc
