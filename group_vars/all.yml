@@ -37,7 +37,7 @@ neovim:
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
-  revision: 3.22.0
+  revision: 3.22.1
   src: /opt/src/rebar3
 
 # https://github.com/vlang/v/releases
