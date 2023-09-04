@@ -2,6 +2,7 @@
   apt:
     name:
       - apt-file
+      - apt-rdepends
       - apt-transport-https
       - ca-certificates
       - gnupg
