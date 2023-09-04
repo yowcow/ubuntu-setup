@@ -9,7 +9,6 @@
   apt:
     name:
       - apache2-utils
-      - apt-transport-https
       - autoconf
       - automake
       - bind9-dnsutils
