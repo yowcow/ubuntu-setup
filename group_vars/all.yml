@@ -33,7 +33,7 @@ jetbrains_mono:
 
 # https://github.com/neovim/neovim/releases
 neovim:
-  version: v0.9.1
+  version: v0.9.2
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
