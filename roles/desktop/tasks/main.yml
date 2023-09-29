@@ -26,3 +26,13 @@
 
 # im
 - include_tasks: fcitx5.yml
+
+# environment
+- name: set desktop profile
+  vars:
+    im: fcitx5
+  block:
+    - template:
+        src: environment.d/99desktop.conf.j2
+        dest: /etc/environment.d/99desktop.conf
+        mode: "0644"
