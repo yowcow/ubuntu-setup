@@ -20,7 +20,7 @@
     - php
     - podman
     - python
-    - v
+    #- v
     ## tools/apps
     - aws
     - neovim
