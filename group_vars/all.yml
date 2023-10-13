@@ -48,11 +48,11 @@ v:
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
-  revision: 26.1.1-1
+  revision: 26.1.1-2
 
 # https://github.com/swaywm/sway/releases
 # https://github.com/yowcow/swaywm-deb/releases
 yowcow_sway:
   revision:
-    sway: 1.8.1-1
-    wlroots: 0.16.2-1
+    sway: 1.8.1-2
+    wlroots: 0.16.2-2
