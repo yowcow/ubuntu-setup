@@ -8,12 +8,6 @@ aws_cli:
 aws_vault:
   revision: v7.2.0
 
-# https://github.com/darktable-org/darktable/releases
-darktable:
-  revision: 4.4.2
-  src: /opt/src/darktable
-  prefix: /opt/darktable
-
 # https://github.com/docker/compose/releases
 docker_compose:
   revision: v2.18.1
@@ -44,6 +38,11 @@ rebar3:
 v:
   revision: "0.4"
   src: /opt/src/v
+
+# https://github.com/darktable-org/darktable/releases
+# https://github.com/yowcow/darktable-deb/releases
+yowcow_darktable:
+  revision: 4.4.2-1
 
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases

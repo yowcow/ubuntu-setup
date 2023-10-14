@@ -1,89 +1,16 @@
 ---
-- name: install mandatory deps for darktable
-  apt:
-    name:
-      - cmake
-      - g++
-      - gcc
-      - intltool
-      - libcolord-gtk1
-      - libcurl4-gnutls-dev
-      - libexiv2-dev
-      - libgtk-3-dev
-      - libjpeg-dev
-      - libjson-glib-dev
-      - liblcms2-dev
-      - liblensfun-dev
-      - libpugixml-dev
-      - librsvg2-dev
-      - libsqlite3-dev
-      - libtiff5-dev
-      - libxml2-dev
-      - libxml2-utils
-      - xsltproc
-
-- name: install optional deps for darktable
-  apt:
-    name:
-      - clang
-      - fop
-      - imagemagick
-      - libcolord-dev
-      - libcolord-gtk-dev
-      - libcups2-dev
-      - libgphoto2-dev
-      - libgraphicsmagick1-dev
-      - libimage-exiftool-perl
-      - liblua5.3-dev
-      - libopenexr-dev
-      - libopenjp2-7-dev
-      - libosmgpsmap-1.0-dev
-      - libsaxon-java
-      - libsecret-1-dev
-      - libsoup2.4-dev
-      - libwebp-dev
-      - llvm-dev
-      - openjdk-18-jre
-      - po4a
-      - python3-jsonschema
-
-- name: check installed darktable revision
+- name: lsb_release -sr
   shell:
-    cmd: "(/opt/darktable/bin/darktable --version | head -2 | tail -1 | cut -d' ' -f4 || true) 2>/dev/null"
+    cmd: "lsb_release -sr 2>/dev/null | tr -d '\n'"
+  register: lsb_release
+
+- name: check installed yowcow-darktable version
+  shell:
+    cmd: "dpkg-query -W yowcow-darktable 2>/dev/null | cut -f2"
   register: installed_revision
 
-#- name: display version
-#  ansible.builtin.debug:
-#    var: installed_revision
-
-- name: build and install darktable
-  when: installed_revision.stdout.find(darktable.revision) == -1
+- name: install yowcow-darktable
+  when: installed_revision.stdout.find(yowcow_darktable.revision) == -1
   block:
-    - ansible.builtin.file:
-        path: "{{ darktable.src }}"
-        state: directory
-        mode: "0755"
-    - ansible.builtin.get_url:
-        url: https://github.com/darktable-org/darktable/releases/download/release-{{ darktable.revision }}/darktable-{{ darktable.revision }}.tar.xz
-        dest: "{{ darktable.src }}/darktable-{{ darktable.revision }}.tar.xz"
-    - ansible.builtin.unarchive:
-        src: "{{ darktable.src }}/darktable-{{ darktable.revision }}.tar.xz"
-        dest: "{{ darktable.src }}"
-    - ansible.builtin.command: "{{ darktable.src }}/darktable-{{ darktable.revision }}/build.sh --prefix {{ darktable.prefix }} --build-type Release --install"
-
-- name: symlink installed darktable
-  ansible.builtin.file:
-    src: "{{ darktable.prefix }}/bin/darktable"
-    dest: /usr/local/bin/darktable
-    state: link
-
-- name: symlink installed darktable desktop entry
-  block:
-    - ansible.builtin.file:
-        path: /usr/local/share/applications
-        state: directory
-        mode: "0755"
-    - ansible.builtin.file:
-        src: "{{ darktable.prefix }}/share/applications/org.darktable.darktable.desktop"
-        dest: /usr/local/share/applications/org.darktable.darktable.desktop
-        state: link
+    - apt:
+        deb: "https://github.com/yowcow/darktable-deb/releases/download/{{ yowcow_darktable.revision }}/yowcow-darktable.{{ yowcow_darktable.revision }}.ubuntu-{{ lsb_release.stdout }}.amd64.deb"
