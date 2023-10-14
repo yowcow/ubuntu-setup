@@ -5,5 +5,7 @@
       - blueman
       - bluez
       - bluez-tools
+      - gstreamer1.0-plugins-bad
       - libspa-0.2-bluetooth
+      - pipewire
       - pulseaudio-module-bluetooth
