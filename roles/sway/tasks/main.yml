@@ -1,5 +1,5 @@
 ---
-- name: lsb_release -sc
+- name: lsb_release -sr
   shell:
     cmd: "lsb_release -sr 2>/dev/null | tr -d '\n'"
   register: lsb_release
