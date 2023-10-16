@@ -42,7 +42,7 @@ v:
 # https://github.com/darktable-org/darktable/releases
 # https://github.com/yowcow/darktable-deb/releases
 yowcow_darktable:
-  revision: 4.4.2-1
+  revision: 4.4.2-3
 
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
