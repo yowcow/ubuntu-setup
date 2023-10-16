@@ -12,7 +12,7 @@
   when: installed_revision.stdout.find(yowcow_erlang.revision) == -1
   block:
     - apt:
-        deb: "https://github.com/yowcow/erlang-deb/releases/download/{{ yowcow_erlang.revision }}/yowcow_erlang-{{ yowcow_erlang.revision }}.ubuntu{{ lsb_release.stdout }}.amd64.deb"
+        deb: "https://github.com/yowcow/erlang-deb/releases/download/{{ yowcow_erlang.revision }}/yowcow-erlang.{{ yowcow_erlang.revision }}.ubuntu-{{ lsb_release.stdout }}.amd64.deb"
 
 - include_tasks: rebar3.yml
 - include_tasks: erlgrind.yml
