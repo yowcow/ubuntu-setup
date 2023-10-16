@@ -36,7 +36,7 @@ rebar3:
 
 # https://github.com/vlang/v/releases
 v:
-  revision: "0.4"
+  revision: "0.4.2"
   src: /opt/src/v
 
 # https://github.com/darktable-org/darktable/releases
@@ -47,7 +47,7 @@ yowcow_darktable:
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
-  revision: 26.1.1-3
+  revision: 26.1.2-1
 
 # https://github.com/swaywm/sway/releases
 # https://github.com/yowcow/swaywm-deb/releases
