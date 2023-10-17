@@ -21,3 +21,8 @@
         dest: "{{ jetbrains_mono.prefix }}/revision"
         content: "{{ jetbrains_mono.revision }}"
     - command: fc-cache
+
+- name: Install JetBrainsMono.conf
+  copy:
+    src: 45-JetBrainsMono.conf
+    dest: /etc/fonts/conf.d/45-JetBrainsMono.conf
