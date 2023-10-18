@@ -6,6 +6,7 @@
       - brightnessctl
       - grim
       - kanshi
+      - network-manager-gnome
       - suckless-tools
       #- sway
       #- sway-backgrounds
