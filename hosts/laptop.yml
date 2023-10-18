@@ -6,6 +6,7 @@ laptop:
         - user: yowcow
           groups:
             - docker
+            - kvm
             - sudo
             - video
       ufw:

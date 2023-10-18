@@ -1,0 +1,18 @@
+---
+- name: install qemu packages
+  apt:
+    name:
+      - bridge-utils
+      - libvirt-clients
+      - libvirt-daemon
+      - libvirt-daemon-system
+      - qemu-kvm
+
+## create dist image
+# qemu-img create ubuntu-23.10.img -f qcow2 25G
+
+## install iso
+# kv -enable-kvm -smp 4 -m 4G -boot d -vga virtio -cdrom path/to/ubuntu-23.10.1-desktop-amd64.iso ubuntu-23.10.img
+
+## boot ubuntu
+# kv -enable-kvm -smp 4 -m 4G -boot d -vga virtio ubuntu-23.10.img
