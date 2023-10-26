@@ -2,6 +2,9 @@ production:
   hosts:
     localhost:
       ansible_connection: local
+      apt:
+        mirror: http://mirrors.digitalocean.com/ubuntu/
+        security: http://security.ubuntu.com/ubuntu/
       resolv:
         nameservers:
           - 1.1.1.1
