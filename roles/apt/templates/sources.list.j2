@@ -1,7 +1,4 @@
-#
-# See `curl mirrors.ubuntu.com/mirrors.txt` to find mirrors
-#
-deb http://ftp.riken.jp/Linux/ubuntu/ {{ codename }} main restricted universe multiverse
-deb http://ftp.riken.jp/Linux/ubuntu/ {{ codename }}-updates main restricted universe multiverse
-deb http://ftp.riken.jp/Linux/ubuntu/ {{ codename }}-backports main restricted universe multiverse
-deb http://ftp.riken.jp/Linux/ubuntu/ {{ codename }}-security main restricted universe multiverse
+deb {{ mirror }} {{ codename }} main restricted universe multiverse
+deb {{ mirror }} {{ codename }}-updates main restricted universe multiverse
+deb {{ mirror }} {{ codename }}-backports main restricted universe multiverse
+deb {{ security }} {{ codename }}-security main restricted universe multiverse
