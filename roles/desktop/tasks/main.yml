@@ -4,6 +4,7 @@
     name:
       - acpi
       - gimp
+      - libreoffice
       - mesa-utils
       - pavucontrol
       - ranger
