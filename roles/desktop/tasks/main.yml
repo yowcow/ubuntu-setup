@@ -31,7 +31,7 @@
 # environment
 - name: set desktop profile
   vars:
-    im: fcitx5
+    im: fcitx
   block:
     - template:
         src: environment.d/99desktop.conf.j2
