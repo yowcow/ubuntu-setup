@@ -17,8 +17,9 @@ all: install
 	$(ANSIBLE) $(GROUP) -m ping
 
 install:
-	sudo apt-get install -y software-properties-common python3 python3-pip
-	python3 -m pip install --upgrade --user pip ansible
+	sudo apt-get install -y software-properties-common pipx
+	([ ! -f "$$HOME/.local/bin/ansible" ] && pipx install --include-deps ansible) \
+		|| pipx upgrade --include-injected ansible
 
 ifneq ($(DRYRUN),)
 play: CHECK := --check
