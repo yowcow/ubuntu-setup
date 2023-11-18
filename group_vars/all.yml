@@ -34,11 +34,6 @@ rebar3:
   revision: 3.22.1
   src: /opt/src/rebar3
 
-# https://github.com/vlang/v/releases
-v:
-  revision: "0.4.2"
-  src: /opt/src/v
-
 # https://github.com/darktable-org/darktable/releases
 # https://github.com/yowcow/darktable-deb/releases
 yowcow_darktable:
