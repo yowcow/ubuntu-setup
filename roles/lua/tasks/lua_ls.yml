@@ -1,0 +1,17 @@
+- name: create a directory for lua_ls
+  ansible.builtin.file:
+    path: /usr/local/luals
+    state: directory
+    mode: "0755"
+
+- name: install lua_ls
+  ansible.builtin.unarchive:
+    src: "https://github.com/LuaLS/lua-language-server/releases/download/{{ lua_ls.revision }}/lua-language-server-{{ lua_ls.revision }}-linux-x64.tar.gz"
+    dest: /usr/local/luals
+    remote_src: yes
+
+- name: symlink lua_ls
+  ansible.builtin.file:
+    src: /usr/local/luals/bin/lua-language-server
+    dest: /usr/local/bin/lua-language-server
+    state: link
