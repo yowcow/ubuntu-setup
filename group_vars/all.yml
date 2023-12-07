@@ -25,6 +25,10 @@ jetbrains_mono:
   revision: "2.304"
   prefix: /usr/local/share/fonts/jetbrains-mono
 
+# https://github.com/LuaLS/lua-language-server/releases
+lua_ls:
+  revision: "3.7.3"
+
 # https://github.com/neovim/neovim/releases
 neovim:
   version: v0.9.4
