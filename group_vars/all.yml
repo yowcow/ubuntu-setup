@@ -46,7 +46,7 @@ yowcow_darktable:
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
-  revision: 26.1.2-1
+  revision: 26.2-1
 
 # https://github.com/swaywm/sway/releases
 # https://github.com/yowcow/swaywm-deb/releases
