@@ -1,1 +1,6 @@
+- name: install packages for lua
+  apt:
+    name:
+      - luarocks
+
 - include_tasks: lua_ls.yml
