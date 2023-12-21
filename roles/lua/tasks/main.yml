@@ -1,6 +1,9 @@
 - name: install packages for lua
   apt:
     name:
+      - liblua5.1-dev
+      - lua-any
+      - lua5.1
       - luarocks
 
 - include_tasks: lua_ls.yml
