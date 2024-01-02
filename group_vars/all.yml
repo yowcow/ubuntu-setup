@@ -31,7 +31,7 @@ lua_ls:
 
 # https://github.com/neovim/neovim/releases
 neovim:
-  version: v0.9.4
+  version: v0.9.5
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
@@ -41,12 +41,12 @@ rebar3:
 # https://github.com/darktable-org/darktable/releases
 # https://github.com/yowcow/darktable-deb/releases
 yowcow_darktable:
-  revision: 4.4.2-3
+  revision: 4.6.0-1
 
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
-  revision: 26.2-1
+  revision: 26.2.1-1
 
 # https://github.com/swaywm/sway/releases
 # https://github.com/yowcow/swaywm-deb/releases
