@@ -8,7 +8,6 @@
       - gnupg
       - software-properties-common
 
-- include_tasks: apt-mirrors.yml
 - include_tasks: hashicorp.yml
 - include_tasks: google-cloud-sdk.yml
 

@@ -2,9 +2,6 @@ laptop:
   hosts:
     localhost:
       ansible_connection: local
-      apt:
-        mirror: http://ftp.riken.jp/Linux/ubuntu/
-        security: http://security.ubuntu.com/ubuntu/
       users:
         - user: yowcow
           groups:
