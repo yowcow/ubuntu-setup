@@ -2,12 +2,12 @@ HOST := $(shell hostname)
 
 ifeq ($(HOST),www-x28)
 GROUP := production
-else ifeq ($(HOST),dev-x28)
-GROUP := development
 else ifeq ($(HOST),alpha-x28)
 GROUP := laptop
 else ifeq ($(HOST),bravo-x28)
 GROUP := laptop
+else
+GROUP := development
 endif
 
 ANSIBLE := ansible -i hosts/$(GROUP).yml
