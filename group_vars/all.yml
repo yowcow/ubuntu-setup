@@ -10,11 +10,11 @@ aws_vault:
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: v2.24.6
+  revision: v2.25.0
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
-  revision: v0.12.1
+  revision: v0.13.1
 
 # https://github.com/elm/compiler/releases
 elm:
@@ -46,11 +46,11 @@ yowcow_darktable:
 # https://github.com/erlang/otp/releases
 # https://github.com/yowcow/erlang-deb/releases
 yowcow_erlang:
-  revision: 26.2.1-1
+  revision: 26.2.3-1
 
 # https://github.com/swaywm/sway/releases
 # https://github.com/yowcow/swaywm-deb/releases
 yowcow_sway:
   revision:
-    sway: 1.8.1-2
-    wlroots: 0.16.2-2
+    sway: 1.9-1
+    wlroots: 0.17.0-1
