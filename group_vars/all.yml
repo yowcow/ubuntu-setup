@@ -52,5 +52,5 @@ yowcow_erlang:
 # https://github.com/yowcow/swaywm-deb/releases
 yowcow_sway:
   revision:
-    sway: 1.9-1
-    wlroots: 0.17.0-1
+    sway: 1.8.1-2
+    wlroots: 0.16.2-2
