@@ -10,7 +10,7 @@ aws_vault:
 
 # https://github.com/docker/compose/releases
 docker_compose:
-  revision: v2.26.1
+  revision: v2.27.0
 
 # https://github.com/docker/buildx/releases
 docker_buildx:
@@ -27,11 +27,11 @@ jetbrains_mono:
 
 # https://github.com/LuaLS/lua-language-server/releases
 lua_ls:
-  revision: "3.7.4"
+  revision: "3.9.1"
 
 # https://github.com/neovim/neovim/releases
 neovim:
-  version: v0.9.5
+  version: v0.10.0
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
