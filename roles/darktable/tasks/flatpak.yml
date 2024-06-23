@@ -1,0 +1,4 @@
+---
+- name: install flatpak darktable
+  ansible.builtin.command:
+    cmd: flatpak install -y flathub org.darktable.Darktable
