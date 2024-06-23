@@ -6,9 +6,9 @@
 - name: add hashicorp apt key
   ansible.builtin.apt_key:
     url: https://apt.releases.hashicorp.com/gpg
-    keyring: /usr/share/keyrings/hashicorp.gpg
+    keyring: /usr/share/keyrings/hashicorp-archive-keyring.gpg
     state: present
 
 - name: add hashicorp apt repository
   ansible.builtin.apt_repository:
-    repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/hashicorp.gpg] https://apt.releases.hashicorp.com {{ lsb_release.stdout }} main"
+    repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com {{ lsb_release.stdout }} main"
