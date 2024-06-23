@@ -1,0 +1,6 @@
+---
+- name: install sway
+  apt:
+    name:
+      - sway
+      - sway-backgrounds

@@ -1,8 +1,8 @@
 - name: install packages for neovim
   apt:
     name:
-      - lua-nvim
       - neovim
+      - nodejs
       - npm
       - python3
       - python3-pip

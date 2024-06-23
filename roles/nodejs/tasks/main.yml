@@ -4,5 +4,3 @@
       - node-typescript
       - nodejs
       - npm
-
-- include_tasks: puppeteer.yml

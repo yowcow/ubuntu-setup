@@ -18,7 +18,6 @@
       - checkinstall
       - clang
       - cmake
-      - cronolog
       - curl
       - devscripts
       - equivs
@@ -40,7 +39,6 @@
       - meson
       - ncal
       - netbase
-        #- netcat
       - nsnake
       - parallel
       - pinentry-tty
@@ -51,9 +49,6 @@
       - ruby-dev
       - software-properties-common
       - speedtest-cli
-      - sqlite3
-      - sqlite3-doc
-      - sqlite3-pcre
       - tmpreaper
       - tmux
       - traceroute
