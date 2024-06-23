@@ -8,8 +8,6 @@
       - mesa-utils
       - pavucontrol
       - ranger
-      - vlc
-      - weston
 
 - name: system-wide locale
   copy:
@@ -20,7 +18,6 @@
 - include_tasks: backlight.yml
 - include_tasks: ctrl-nocaps.yml
 - include_tasks: fonts.yml
-#- include_tasks: wine.yml
 
 # desktops
 - include_tasks: gnome.yml

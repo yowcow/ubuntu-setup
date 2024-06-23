@@ -1,7 +1,0 @@
-- name: install packages for wine
-  apt:
-    name:
-      #- winbind
-      - wine
-      - wine32
-      - winetricks
