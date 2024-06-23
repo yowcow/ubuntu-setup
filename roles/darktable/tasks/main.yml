@@ -1,4 +1,34 @@
 ---
+- name: install darktable deps
+  apt:
+    name:
+      - libcurl4-gnutls-dev
+      - libexiv2-dev
+      - libimage-exiftool-perl
+      - libimath-dev
+      - libjson-glib-dev
+      - liblcms2-dev
+      - liblensfun-dev
+      - libpugixml-dev
+      - libsqlite3-dev
+      - python3-imath
+      - python3-jsonschema
+      - xsltproc
+      - libavif-dev
+      - libcolord-dev
+      - libcolord-gtk-dev
+      - libcups2-dev
+      - libgmic-dev
+      - libgphoto2-dev
+      - libgraphicsmagick1-dev
+      - libheif-dev
+      - libjxl-dev
+      - libopenexr-dev
+      - libopenjp2-7-dev
+      - libosmgpsmap-1.0-dev
+      - libsdl2-dev
+      - libsecret-1-dev
+
 - name: lsb_release -sr
   shell:
     cmd: "lsb_release -sr 2>/dev/null | tr -d '\n'"

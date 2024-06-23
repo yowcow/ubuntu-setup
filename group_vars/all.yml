@@ -33,24 +33,24 @@ lua_ls:
 neovim:
   version: v0.10.0
 
-# https://github.com/erlang/rebar3/releases
-rebar3:
-  revision: 3.23.0
-  src: /opt/src/rebar3
+## https://github.com/erlang/rebar3/releases
+#rebar3:
+#  revision: 3.23.0
+#  src: /opt/src/rebar3
 
 # https://github.com/darktable-org/darktable/releases
 # https://github.com/yowcow/darktable-deb/releases
 yowcow_darktable:
-  revision: 4.6.1-1
+  revision: 4.6.1-2
 
-# https://github.com/erlang/otp/releases
-# https://github.com/yowcow/erlang-deb/releases
-yowcow_erlang:
-  revision: 26.2.4-1
+## https://github.com/erlang/otp/releases
+## https://github.com/yowcow/erlang-deb/releases
+#yowcow_erlang:
+#  revision: 26.2.4-1
 
-# https://github.com/swaywm/sway/releases
-# https://github.com/yowcow/swaywm-deb/releases
-yowcow_sway:
-  revision:
-    sway: 1.8.1-2
-    wlroots: 0.16.2-2
+## https://github.com/swaywm/sway/releases
+## https://github.com/yowcow/swaywm-deb/releases
+#yowcow_sway:
+#  revision:
+#    sway: 1.8.1-2
+#    wlroots: 0.16.2-2
