@@ -1,9 +1,0 @@
-- name: install flatpak wezterm
-  ansible.builtin.command:
-    cmd: flatpak install -y flathub org.wezfurlong.wezterm
-
-- name: install /usr/local/bin/wezterm
-  ansible.builtin.copy:
-    src: wezterm
-    dest: /usr/local/bin/wezterm
-    mode: '0755'
