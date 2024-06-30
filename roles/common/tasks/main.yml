@@ -18,8 +18,10 @@
       - checkinstall
       - clang
       - cmake
+      - crossbuild-essential-arm64
       - curl
       - devscripts
+      - dpkg-dev
       - equivs
       - finger
       - flex
