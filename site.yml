@@ -35,6 +35,7 @@
     - darktable
     - fonts
     - sway
+    - vivaldi
 
 - name: apply configuration to development
   hosts: development

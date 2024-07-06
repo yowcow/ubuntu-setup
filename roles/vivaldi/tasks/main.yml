@@ -1,0 +1,20 @@
+- name: add vivaldi apt key
+  ansible.builtin.apt_key:
+    url: https://repo.vivaldi.com/stable/linux_signing_key.pub
+    keyring: /usr/share/keyrings/vivaldi-keyring.gpg
+    state: present
+
+- name: get architecture
+  shell: dpkg --print-architecture
+  register: arch
+
+- name: add vivaldi apt repository
+  template:
+    src: vivaldi.sources.j2
+    dest: /etc/apt/sources.list.d/vivaldi.sources
+    mode: "0644"
+
+- name: add vivaldi
+  apt:
+    name:
+      - vivaldi-stable
